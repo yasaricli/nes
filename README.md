@@ -1,18 +1,14 @@
 # Nes
 Nes Emulator for meteor application.
 
+Follow progress on Libreboard here [Nes board][Nes].
+
 Install and Run
 =======
 
     $ git clone https://github.com/yasaricli/nes.git
     $ cd nes
     $ meteor
-
-
-
-
-
-Follow progress on Libreboard here [Nes board][Nes].
 
 Uses
 =======
