@@ -1,0 +1,7 @@
+/* IMPORTS */
+@import url(http://fonts.googleapis.com/css?family=Anton|Sigmar+One|Open+Sans+Condensed:300italic,700,300);
+
+/* CLASSES */
+.anton { font-family: 'Anton', sans-serif; }
+.condensed { font-family: 'Open Sans Condensed', sans-serif; }
+.sigmar { font-family: 'Sigmar One', cursive; }

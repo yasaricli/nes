@@ -1,0 +1,28 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+insecure
+iron:router
+reywood:publish-composite
+dburles:collection-helpers
+matb33:collection-hooks
+copleykj:livestamp
+cfs:standard-packages
+cfs:gridfs
+aldeed:collection2
+fortawesome:fontawesome
+aldeed:autoform-select2
+aldeed:autoform
+vazco:universe-autoform-select
+yogiben:autoform-file
+ongoworks:security
+alanning:roles
+cfs:data-man
+http
+accounts-base
+accounts-ui
+accounts-password

@@ -1,0 +1,51 @@
+body { background-color:#000; padding:0px; margin:0px; color:#fff; font-family: helvetica, arial, 'lucida grande', sans-serif; }
+
+#Header { background-color:rgb(39, 39, 39); height:50px; }
+#Main { }
+#Footer { }
+
+.container { width:830px; margin:auto; }
+
+input, textarea { padding:10px; outline:none; border:0px; font-family: 'Open Sans Condensed', sans-serif; font-size:25px; resize:none; }
+label { display:block; }
+
+.form-group { margin:10px 0 10px 0; }
+.help-block { color:red; }
+
+ul,li { list-style:none; margin:0px; padding:0px; }
+a { text-decoration:none; color:white; }
+
+.fs20 { font-size:20px; }
+.fs30 { font-size:30px; }
+.fs40 { font-size:40px; }
+
+.clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
+.empty { text-align:center; margin:0px!important; padding:0px!important; background-color:black!important; width:100%!important; color:#ccc; }
+
+
+#Roms { }
+#Roms li { width:256px; min-height:300px; float:left; background-color:rgb(39, 39, 39); margin:0 10px 10px 0; padding:5px; }
+#Roms li a { display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; }
+#Roms li a:hover { background-color: #2F2F2F; }
+
+#Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
+#Roms li .name { font-size:20px; font-weight:700; text-align:center; padding:10px; }
+#Roms li .description { padding:10px; }
+
+#Rom { text-align:center; }
+#Rom .name, #Rom .description { font-family: 'Open Sans Condensed', sans-serif; }
+
+
+/* ACCOUNTS */
+.accounts-dialog { background-color:rgb(39, 39, 39); border:0px; color:white; }
+.accounts-dialog input { color:#333; padding:10px!important; border-radius:0px!important; border:0px!important; }
+#login-buttons a { font-size: 16px; text-decoration: none; }
+#login-buttons { margin-top:18px; float:right; }
+#login-buttons .login-button, .accounts-dialog .login-button { background-color:#333; border:0px; border-radius:0px; font-size:18px; margin-bottom:10px; }
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover { background-color:#2F2F2F; }
+.accounts-dialog .error-message { background-color: rgb(108, 28, 28); color: white; padding: 10px; text-align: center; font-size:15px; }
+.accounts-dialog { box-shadow:0 0 0px 0; -webkit-box-shadow:0 0 0px 0; border-radius:0px; }
+
+.loading { padding: 50px; text-align: center; font-size: 40px; }
+
+#insertRomForm {   background-color: rgb(39, 39, 39); padding: 30px; }

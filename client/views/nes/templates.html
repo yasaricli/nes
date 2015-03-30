@@ -1,0 +1,24 @@
+<head>
+  <title>nes</title>
+</head>
+
+<template name="layout">
+    <div id="Header">
+        <div class="container clearfix">{{ > header }}</div>
+    </div>
+    <div id="Main">
+        <div class="container">{{ > yield }}</div>
+    </div>
+    <div id="Footer">
+        <div class="container">{{ > footer }}</div>
+    </div>
+</template>
+
+<template name="header">
+    {{> loginButtons }}
+</template>
+<template name="footer"></template>
+
+<template name="loading">
+    <div class="loading sigmar">loading..</div>
+</template>
