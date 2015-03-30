@@ -28,5 +28,5 @@ Roms.before.insert(function(userId, doc) {
 isServer(function() {
 
     // security Role
-    Roms.permit('insert').ifHasRole('admin').apply();
+    Roms.permit(['insert', 'remove', 'update']).ifHasRole('admin').apply();
 });

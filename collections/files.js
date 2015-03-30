@@ -6,5 +6,5 @@ Files = new FS.Collection("files", {
 isServer(function() {
 
     // security Role
-    Files.files.permit('insert').ifHasRole('admin').apply();
+    Files.files.permit(['insert', 'remove', 'update']).ifHasRole('admin').apply();
 });
