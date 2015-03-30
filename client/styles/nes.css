@@ -49,3 +49,4 @@ a { text-decoration:none; color:white; }
 .loading { padding: 50px; text-align: center; font-size: 40px; }
 
 #insertRomForm {   background-color: rgb(39, 39, 39); padding: 30px; }
+#Controls { width:400px; margin:50px auto; color:rgb(195, 138, 35); }
