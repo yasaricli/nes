@@ -3,6 +3,7 @@
 </head>
 
 <template name="layout">
+    {{ > forkme }}
     <div id="Header">
         <div class="container clearfix">{{ > header }}</div>
     </div>
@@ -17,6 +18,13 @@
 <template name="header">
     {{> loginButtons }}
 </template>
+
+<template name="forkme">
+    <a href="https://github.com/yasaricli/nes">
+        <img class="forkme" src="/forkme_left.png" alt="Fork me on GitHub">
+    </a>
+</template>
+
 <template name="footer"></template>
 
 <template name="loading">
