@@ -12,5 +12,14 @@ Template.roms.events({
              // $push insert stars list
              Roms.update(this._id, { $push: starObj });
         }, this);
+    },
+
+    'click .remove': function(event, template) {
+        event.preventDefault();
+        return isAuthenticated(function() {
+
+            // Remove
+            Roms.remove(this._id);
+        }, this);
     }
 });

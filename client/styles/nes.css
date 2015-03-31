@@ -20,6 +20,9 @@ a { text-decoration:none; color:white; }
 .fs30 { font-size:30px; }
 .fs40 { font-size:40px; }
 
+.remove { background-color:rgb(87, 11, 11)!important; }
+.remove:hover { background-color:rgb(73, 9, 9)!important; }
+
 .no-auth { cursor:default!important; color:rgba(204, 204, 204, 0.28); }
 
 .clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
@@ -28,7 +31,7 @@ a { text-decoration:none; color:white; }
 
 #Roms { }
 #Roms li { width:256px; min-height:300px; float:left; background-color:rgb(39, 39, 39); margin:0 10px 10px 0; padding:5px; }
-#Roms li a { display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; }
+#Roms li a { display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; margin-bottom:10px; }
 #Roms li a:hover { background-color: #2F2F2F; }
 
 #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }

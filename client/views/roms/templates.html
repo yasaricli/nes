@@ -15,6 +15,10 @@
                 {{/if}}
                 <div class="name">{{ name }}</div>
                 <a href="{{ pathFor route='Rom' }}">PLAY</a>
+
+                {{#if isInRole 'admin'}}
+                    <a href="#remove" class="remove">REMOVE</a>
+                {{/if}}
             </li>
         {{ else }}
             <li class="empty sigmar">no roms!</li>
