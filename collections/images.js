@@ -1,5 +1,11 @@
 Images = new FS.Collection("images", {
-    stores: [new FS.Store.GridFS("imagesStore")]
+    stores: [new FS.Store.GridFS("imagesStore")],
+    filter: {
+        allow: {
+            extensions: ['png'],
+            contentTypes: ['image/*']
+        }
+    }
 });
 
 isServer(function() {});
