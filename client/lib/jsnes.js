@@ -6748,7 +6748,7 @@ root.Jnes = function(_this) {
             this.writeFrame = function(buffer, prevBuffer) {
                 var imageData = this.canvasImageData.data,
                     pixel, i, j;
-                for (i=0; i<300*240; i++) {
+                for (i=0; i<256*240; i++) {
                     pixel = buffer[i];
                     if (pixel != prevBuffer[i]) {
                         j = i*4;

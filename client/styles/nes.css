@@ -15,9 +15,12 @@ label { display:block; }
 ul,li { list-style:none; margin:0px; padding:0px; }
 a { text-decoration:none; color:white; }
 
+.fs13 { font-size:13px; }
 .fs20 { font-size:20px; }
 .fs30 { font-size:30px; }
 .fs40 { font-size:40px; }
+
+.no-auth { cursor:auto!important; }
 
 .clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
 .empty { text-align:center; margin:0px!important; padding:0px!important; background-color:black!important; width:100%!important; color:#ccc; }
@@ -29,12 +32,14 @@ a { text-decoration:none; color:white; }
 #Roms li a:hover { background-color: #2F2F2F; }
 
 #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
-#Roms li .name { font-size:20px; font-weight:700; text-align:center; padding:10px; }
+#Roms li .name { font-size:19px; font-weight:700; text-align:center; padding:10px; }
+#Roms li .createdAt { font-size:19px; text-align:center; color: #ccc; float: left; padding: 10px; }
+#Roms li .createdAt .livestamp { font-size:13px; }
+#Roms li .stars { padding: 10px; float:right; cursor:pointer; }
 #Roms li .description { padding:10px; }
 
 #Rom { text-align:center; }
 #Rom .name, #Rom .description { font-family: 'Open Sans Condensed', sans-serif; }
-
 
 /* ACCOUNTS */
 .accounts-dialog { background-color:rgb(39, 39, 39); border:0px; color:white; }

@@ -7,6 +7,11 @@ Roms.attachSchema(new SimpleSchema({
     fileId: { type: String, label: 'file', autoform: new Field().upload('Files') },
     imageId: { type: String, label: 'image', autoform: new Field().upload('Images') },
     active: { type: Boolean },
+
+    stars: {
+        type: [String], // 'userId'
+        optional: true
+    }
 }));
 
 Roms.helpers({
@@ -25,8 +30,4 @@ Roms.before.insert(function(userId, doc) {
 });
 
 
-isServer(function() {
-
-    // security Role
-    Roms.permit(['insert', 'remove', 'update']).ifHasRole('admin').apply();
-});
+isServer(function() {});
