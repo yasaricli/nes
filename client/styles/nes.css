@@ -20,7 +20,7 @@ a { text-decoration:none; color:white; }
 .fs30 { font-size:30px; }
 .fs40 { font-size:40px; }
 
-.no-auth { cursor:auto!important; }
+.no-auth { cursor:default!important; color:rgba(204, 204, 204, 0.28); }
 
 .clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
 .empty { text-align:center; margin:0px!important; padding:0px!important; background-color:black!important; width:100%!important; color:#ccc; }
