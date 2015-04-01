@@ -6,11 +6,11 @@
  * set to a deny function for that rule.
  * */
 Security.defineMethod("ifUpdateRom", {
-    deny: function(type, arg, userId) {
-        return !userId;
+    deny: function(type, arg, userId, doc, fields, filter) {
+        var allowKeys = ['stars'];
+        return contains(_.keys(_.omit(doc, allowKeys)), fields);
     }
 });
-
 
 // ROMS COLLECTION
 Roms.permit(['insert', 'remove']).ifHasRole('admin').apply();
