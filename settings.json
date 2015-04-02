@@ -2,6 +2,9 @@
     "kadira": {
         "appId": "",
         "appSecret": ""
-
+    },
+    "sikka": {
+        "siteKey": "",
+        "secret": ""
     }
 }
