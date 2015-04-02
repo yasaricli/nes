@@ -4,9 +4,7 @@ root.isAuthenticated = function(callback, $this) {
     return callback && callback.call($this ? $this : {});
 }
 
-
 /* ROM.JS END */
-
 JSNES.DummyUI = function(nes) {
     this.nes = nes;
     this.enable = function() {};

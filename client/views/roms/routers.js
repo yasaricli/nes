@@ -1,14 +1,16 @@
+var subs = new SubsManager();
+
 Router.route('/', {
   name: 'Roms',
   waitOn: function() {
-      return Meteor.subscribe('roms');
+      return subs.subscribe('roms');
   }
 });
 
 Router.route('/rom/:_id', {
   name: 'Rom',
   waitOn: function() {
-      return Meteor.subscribe('rom', this.params._id);
+      return subs.subscribe('rom', this.params._id);
   },
   data: function() {
       var params = this.params;

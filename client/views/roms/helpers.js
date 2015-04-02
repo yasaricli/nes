@@ -1,5 +1,5 @@
 Template.roms.helpers({
-    roms: function() {
+    roms: function(prop) {
         return Roms.find({ }, { sort: { createdAt: -1 } });
     }
 });

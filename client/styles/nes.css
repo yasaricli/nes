@@ -34,6 +34,7 @@ a { text-decoration:none; color:white; }
 #Roms li a { display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; margin-bottom:10px; }
 #Roms li a:hover { background-color: #2F2F2F; }
 
+
 #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
 #Roms li .name { font-size:19px; font-weight:700; text-align:center; padding:10px; }
 #Roms li .createdAt { font-size:19px; text-align:center; color: #ccc; float: left; padding: 10px; }
