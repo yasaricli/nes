@@ -16,7 +16,7 @@ JSNES.DummyUI = function(nes) {
 root.Jnes = function(_this) {
     return new JSNES({
         ui: function(nes) {
-
+            var doc = $(document);
             this.screen = _this.find('#Emulator');
             this.canvasContext = this.screen.getContext('2d');
             this.canvasImageData = this.canvasContext.getImageData(0, 0, 256, 240);
@@ -26,15 +26,22 @@ root.Jnes = function(_this) {
             }
 
             // KEYBOARD
-            $(document).
-                bind('keydown', function(evt) {
-                      nes.keyboard.keyDown(evt);
-                }).
-                bind('keyup', function(evt) {
-                    nes.keyboard.keyUp(evt);
-                }).
-                bind('keypress', function(evt) {
-                    nes.keyboard.keyPress(evt);
+            doc.bind('keydown', function(evt) {
+              if (evt.target.tagName != 'INPUT') {
+                nes.keyboard.keyDown(evt);
+              }
+            });
+
+            doc.bind('keyup', function(evt) {
+              if (evt.target.tagName != 'INPUT') {
+                nes.keyboard.keyUp(evt);
+              }
+            });
+
+            doc.bind('keypress', function(evt) {
+              if (evt.target.tagName != 'INPUT') {
+                nes.keyboard.keyPress(evt);
+              }
             });
 
             this.enable = function() {};
