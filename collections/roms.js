@@ -29,5 +29,12 @@ Roms.before.insert(function(userId, doc) {
     doc.createdAt = new Date();
 });
 
-
-isServer(function() {});
+// ADMIN
+Roms.attachAdmin({
+  name: 'Roms',
+  list_display: ['name', 'active'],
+  sort: ['-createdAt'],
+  security: true,
+  list_per_page: 10,
+  verbose_name: 'Rom'
+});

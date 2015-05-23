@@ -1,5 +1,4 @@
 <template name="roms">
-    {{ > insertRomForm }}
     <span class="anton fs40">ROMS</span>
     <ul id="Roms" class="clearfix">
         {{#each roms }}
@@ -15,10 +14,6 @@
                 {{/if}}
                 <div class="name">{{ name }}</div>
                 <a href="{{ pathFor route='Rom' }}">PLAY</a>
-
-                {{#if isInRole 'admin'}}
-                    <a href="#remove" class="remove">REMOVE</a>
-                {{/if}}
             </li>
         {{ else }}
             <li class="empty sigmar">no roms!</li>
@@ -32,18 +27,4 @@
         <div class="name fs20">{{ rom.description }}</div>
         {{ > emulator }}
     </div>
-</template>
-
-<template name="insertRomForm">
-    {{#if isInRole 'admin'}}
-        {{#autoForm collection="Roms" id="insertRomForm" type="insert"}}
-            <span class="anton fs40">ADD ROM</span>
-            {{> afQuickField name='name' }}
-            {{> afQuickField name='description' }}
-            {{> afQuickField name='imageId' }}
-            {{> afQuickField name='fileId' }}
-            {{> afQuickField name='active' }}
-            <button type="submit" class="btn btn-primary">Insert Rom</button>
-        {{/autoForm}}
-    {{/if}}
 </template>
