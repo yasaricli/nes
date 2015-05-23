@@ -27,7 +27,5 @@ accounts-base
 accounts-ui
 accounts-password
 mizzao:user-status
-meteorhacks:kadira
 meteorhacks:subs-manager
-meteorhacks:sikka
 yasaricli:admin
