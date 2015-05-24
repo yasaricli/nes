@@ -33,6 +33,7 @@ Roms.before.insert(function(userId, doc) {
 Roms.attachAdmin({
   name: 'Roms',
   list_display: ['name', 'active'],
+  exclude: ['stars', 'createdAt'],
   sort: ['-createdAt'],
   security: true,
   list_per_page: 10,
