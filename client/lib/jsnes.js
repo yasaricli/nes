@@ -6713,3 +6713,4 @@ JSNES.ROM.prototype = {
         }
     }
 };
+/* ROM.JS END */

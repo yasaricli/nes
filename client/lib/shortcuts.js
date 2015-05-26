@@ -4,7 +4,6 @@ root.isAuthenticated = function(callback, $this) {
     return callback && callback.call($this ? $this : {});
 }
 
-/* ROM.JS END */
 JSNES.DummyUI = function(nes) {
     this.nes = nes;
     this.enable = function() {};
@@ -20,6 +19,9 @@ root.Jnes = function(_this) {
             this.screen = _this.find('#Emulator');
             this.canvasContext = this.screen.getContext('2d');
             this.canvasImageData = this.canvasContext.getImageData(0, 0, 256, 240);
+
+            // options
+            nes.opts.emulateSound = true;
 
             for (var i = 3; i < this.canvasImageData.data.length-3; i += 4) {
                 this.canvasImageData.data[i] = 0xFF;
@@ -44,19 +46,30 @@ root.Jnes = function(_this) {
               }
             });
 
+            /*
+             * yasaricli:dynamicaudio package write audio method write..
+             * */
+            this.dynamicaudio = new DynamicAudio({
+              swf: '/dynamicaudio.swf'
+            });
+
             this.enable = function() {};
+
             this.updateStatus = function(text) {
-                Session.set('status', text);
+              Session.set('status', text);
             };
 
             this.screenshot = function() {
-                var data = this.screen.toDataURL("image/png"),
-                    img = new Image();
-                img.src = data;
-                return img;
+              var data = this.screen.toDataURL("image/png"),
+                  img = new Image();
+              img.src = data;
+              return img;
             };
 
-            this.writeAudio = function() {};
+            this.writeAudio = function(samples) {
+              this.dynamicaudio.writeInt(samples);
+            };
+
             this.writeFrame = function(buffer, prevBuffer) {
                 var imageData = this.canvasImageData.data,
                     pixel, i, j;

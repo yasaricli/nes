@@ -1,13 +1,47 @@
 Roms = new Mongo.Collection("roms");
 
 Roms.attachSchema(new SimpleSchema({
-    name: { type: String },
-    description: { type: String, optional: true, autoform: new Field().textarea() },
-    createdAt: { type: Date, denyUpdate: true },
-    fileId: { type: String, label: 'Nes File', autoform: new Field().upload('Files') },
-    imageId: { type: String, label: 'Nes Image', autoform: new Field().upload('Images') },
-    active: { type: Boolean },
+    name: {
+      type: String
+    },
+    description: {
+      type: String,
+      optional: true,
+      autoform: {
+        type: 'textarea'
+      }
+    },
+    createdAt: {
+      type: Date,
+      denyUpdate: true
+    },
+    fileId: {
+      type: String,
+      label: 'Nes File',
+      autoform: {
+        afFieldInput: {
+          type: 'fileUpload',
+          collection: 'Files'
+        }
+      }
+    },
+    imageId: {
+      type: String,
+      label: 'Nes Image',
+      autoform: {
+        afFieldInput: {
+          type: 'fileUpload',
+          collection: 'Images'
+        }
+      }
+    },
+    active: {
+      type: Boolean
+    },
 
+    /*
+     * When the user makes all the star's id there.
+     * */
     stars: {
         type: [String], // 'userId'
         optional: true
