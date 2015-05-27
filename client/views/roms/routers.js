@@ -1,23 +1,21 @@
-var subs = new SubsManager();
-
 Router.route('/', {
   name: 'Roms',
   waitOn: function() {
-      return subs.subscribe('roms');
+    return Meteor.subscribe('roms');
   }
 });
 
-Router.route('/rom/:_id', {
+Router.route('/rom/:slug', {
   name: 'Rom',
   waitOn: function() {
-      return subs.subscribe('rom', this.params._id);
+      return Meteor.subscribe('rom', this.params.slug);
   },
   data: function() {
-      var params = this.params;
-      return {
-          rom: function() {
-              return Roms.findOne(params._id);
-          }
+    var params = this.params;
+    return {
+      rom: function() {
+        return Roms.findOne({ slug: params.slug });
       }
+    }
   }
 });

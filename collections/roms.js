@@ -4,6 +4,10 @@ Roms.attachSchema(new SimpleSchema({
     name: {
       type: String
     },
+    slug: {
+      type: String,
+      optional: true
+    },
     description: {
       type: String,
       optional: true,
@@ -49,24 +53,25 @@ Roms.attachSchema(new SimpleSchema({
 }));
 
 Roms.helpers({
-    file: function() {
-        return Files.findOne(this.fileId);
-    },
-    image: function() {
-        return Images.findOne(this.imageId);
-    }
+  file: function() {
+    return Files.findOne(this.fileId);
+  },
+  image: function() {
+    return Images.findOne(this.imageId);
+  }
 });
 
 // HOOKS
 Roms.before.insert(function(userId, doc) {
-    doc.createdAt = new Date();
+  doc.createdAt = new Date();
+  doc.slug = slugify(doc.name);
 });
 
 // ADMIN
 Roms.attachAdmin({
   name: 'Roms',
   list_display: ['name', 'active', 'stars'],
-  exclude: ['stars', 'createdAt'],
+  exclude: ['stars', 'createdAt', 'slug'],
   sort: ['-createdAt'],
   security: true,
   list_per_page: 10,

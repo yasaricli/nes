@@ -18,7 +18,7 @@ a { text-decoration:none; color:white; }
 .fs13 { font-size:13px; }
 .fs20 { font-size:20px; }
 .fs30 { font-size:30px; }
-.fs40 { font-size:40px; }
+.fs40 { font-size:40px!important; }
 
 .remove { background-color:rgb(87, 11, 11)!important; }
 .remove:hover { background-color:rgb(73, 9, 9)!important; }
@@ -58,4 +58,8 @@ a { text-decoration:none; color:white; }
 .loading { padding: 50px; text-align: center; font-size: 40px; }
 
 #insertRomForm {   background-color: rgb(39, 39, 39); padding: 30px; }
-#Controls { width:400px; margin:50px auto; color:rgb(195, 138, 35); }
+#Controls { width:400px; margin:20px auto; color:rgb(195, 138, 35); }
+.controls-header { background-color:rgb(195, 138, 35); color:white; }
+.notFound { text-align:center; font-size:30px; margin-top:25px; }
+.notFound a { font-weight:bold; text-decoration:underline; }
+.fps { position:absolute; padding:9px; background-color:rgb(124, 14, 14); top:0px; left: 0px; right: 0px; margin: auto; width: 350px; }

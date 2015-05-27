@@ -1,30 +1,30 @@
 <template name="roms">
-    <span class="anton fs40">ROMS</span>
-    <ul id="Roms" class="clearfix">
-        {{#each roms }}
-            <li>
-                <div class="createdAt">
-                    <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
-                </div>
-                <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
-                  <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
-                </div>
-                {{# if image }}
-                    <img src="{{ image.url }}">
-                {{/if}}
-                <div class="name">{{ name }}</div>
-                <a href="{{ pathFor route='Rom' }}">PLAY</a>
-            </li>
-        {{ else }}
-            <li class="empty sigmar">no roms!</li>
-        {{/each}}
-    </ul>
+  <span class="anton fs40">ROMS</span>
+  <ul id="Roms" class="clearfix">
+    {{#each roms }}
+      <li>
+        <div class="createdAt">
+          <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
+        </div>
+        <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
+          <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
+        </div>
+        {{# if image }}
+          <img src="{{ image.url }}">
+        {{/if}}
+        <div class="name">{{ name }}</div>
+          <a href="{{ pathFor route='Rom' }}">PLAY</a>
+      </li>
+    {{ else }}
+      <li class="empty sigmar">no roms!</li>
+    {{/each}}
+  </ul>
 </template>
 
 <template name="rom">
-    <div id="Rom">
-        <div class="name fs40">{{ rom.name }}</div>
-        <div class="name fs20">{{ rom.description }}</div>
-        {{ > emulator }}
-    </div>
+  <div id="Rom">
+    <div class="name fs40">{{ rom.name }}</div>
+    <div class="name fs20">{{ rom.description }}</div>
+    {{ > emulator }}
+  </div>
 </template>

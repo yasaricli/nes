@@ -3,30 +3,32 @@
 </head>
 
 <template name="layout">
-    {{ > forkme }}
-    <div id="Header">
-        <div class="container clearfix">{{ > header }}</div>
-    </div>
-    <div id="Main">
-        <div class="container">{{ > yield }}</div>
-    </div>
-    <div id="Footer">
-        <div class="container">{{ > footer }}</div>
-    </div>
+  {{ > forkme }}
+  <div id="Header">
+    <div class="container clearfix">{{ > header }}</div>
+  </div>
+  <div id="Main">
+    <div class="container">{{ > yield }}</div>
+  </div>
 </template>
 
 <template name="header">
-    {{> loginButtons }}
+  {{> loginButtons }}
 </template>
 
 <template name="forkme">
-    <a href="https://github.com/yasaricli/nes">
-        <img class="forkme" src="/forkme_left.png" alt="Fork me on GitHub">
-    </a>
+  <a href="https://github.com/yasaricli/nes">
+    <img class="forkme" src="/forkme_left.png" alt="Fork me on GitHub">
+  </a>
 </template>
 
-<template name="footer"></template>
-
 <template name="loading">
-    <div class="loading sigmar">loading..</div>
+  <div class="loading sigmar">loading..</div>
+</template>
+
+<template name="notFound">
+  <div class="notFound condensed">
+    <div class="fs40">Page not found</div>
+    <div>Go to the <a href="{{ pathFor route='Roms' }}">roms</a> page.</div>
+  </div>
 </template>

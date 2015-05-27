@@ -1,16 +1,17 @@
 <template name="emulator">
     <canvas id="Emulator" width="256" height="240"></canvas>
-    <div class="sigmar fs20">{{ session 'status' }}</div>
+    <div class="sigmar fs20 fps">{{ session 'status' }}</div>
     {{ > controls }}
 </template>
 
 <template name="controls">
-    <table id="Controls" class="sigmar">
-        <tbody><tr>
-            <th>Button</th>
-            <th>Player 1</th>
-            <th>Player 2</th>
-        </tr>
+  <table id="Controls" class="sigmar">
+    <tbody>
+      <tr class="controls-header">
+        <th>Button</th>
+        <th>Player 1</th>
+        <th>Player 2</th>
+      </tr>
         <tr>
             <td>Left</td>
             <td>Left</td>
@@ -50,5 +51,6 @@
             <td>Ctrl</td>
             <td>Num-3</td>
         </tr>
-    </tbody></table>
+    </tbody>
+  </table>
 </template>

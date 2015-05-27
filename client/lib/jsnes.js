@@ -1989,6 +1989,10 @@ JSNES.Keyboard = function() {
 JSNES.Keyboard.prototype = {
     setKey: function(key, value) {
         switch (key) {
+
+            /*
+             * PLAYER 1
+             * */
             case 88: this.state1[this.keys.KEY_A] = value; break;      // X
             case 89: this.state1[this.keys.KEY_B] = value; break;      // Y (Central European keyboard)
             case 90: this.state1[this.keys.KEY_B] = value; break;      // Z
@@ -1999,6 +2003,9 @@ JSNES.Keyboard.prototype = {
             case 37: this.state1[this.keys.KEY_LEFT] = value; break;   // Left
             case 39: this.state1[this.keys.KEY_RIGHT] = value; break;  // Right
 
+            /*
+             * PLAYER 2
+             * */
             case 103: this.state2[this.keys.KEY_A] = value; break;     // Num-7
             case 105: this.state2[this.keys.KEY_B] = value; break;     // Num-9
             case 99: this.state2[this.keys.KEY_SELECT] = value; break; // Num-3
