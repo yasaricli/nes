@@ -35,7 +35,7 @@ cfs:upload-http@0.0.20
 cfs:worker@0.1.4
 check@1.0.5
 coffeescript@1.0.6
-copleykj:livestamp@1.1.6
+copleykj:livestamp@1.1.7
 dburles:collection-helpers@1.0.3
 dburles:mongo-collection-instances@0.3.3
 ddp@1.1.0
@@ -106,11 +106,11 @@ underscorestring:underscore.string@3.0.3_1
 url@1.0.4
 useraccounts:core@1.10.0
 useraccounts:unstyled@1.10.0
-vazco:universe-autoform-select@0.1.2
+vazco:universe-autoform-select@0.1.4
 webapp@1.2.0
 webapp-hashing@1.0.3
 wizonesolutions:underscore-string@1.0.0
-yasaricli:admin@0.0.9_1
+yasaricli:admin@0.0.9_2
 yasaricli:dynamicaudio@0.0.1
 yasaricli:slugify@0.0.5
 yogiben:autoform-file@0.2.5
