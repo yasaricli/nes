@@ -76,4 +76,8 @@ Roms.attachAdmin({
   security: true,
   list_per_page: 10,
   verbose_name: 'Rom',
+  subscriptions: {
+    'cfs.files.filerecord': {},
+    'cfs.images.filerecord': {}
+  }
 });
