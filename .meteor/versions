@@ -110,7 +110,7 @@ vazco:universe-autoform-select@0.1.4
 webapp@1.2.0
 webapp-hashing@1.0.3
 wizonesolutions:underscore-string@1.0.0
-yasaricli:admin@0.0.9_2
+yasaricli:admin@0.1.0
 yasaricli:dynamicaudio@0.0.1
 yasaricli:slugify@0.0.5
 yogiben:autoform-file@0.2.5
