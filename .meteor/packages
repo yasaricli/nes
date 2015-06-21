@@ -27,7 +27,7 @@ accounts-base
 accounts-ui
 accounts-password
 mizzao:user-status
-yasaricli:admin
 yasaricli:dynamicaudio
 mquandalle:ismobile
 yasaricli:slugify
+yasaricli:admin

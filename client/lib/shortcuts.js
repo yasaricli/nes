@@ -1,7 +1,18 @@
-var root = this;
+var root = this, SCREENS;
+
+SCREENS = {
+  DEFAULT: {
+    width: '256px',
+    height: '240px'
+  },
+  ZOOM: {
+    width: '512px',
+    height: '480px'
+  }
+};
 
 root.isAuthenticated = function(callback, $this) {
-    return callback && callback.call($this ? $this : {});
+  return callback && callback.call($this ? $this : {});
 }
 
 JSNES.DummyUI = function(nes) {
@@ -24,8 +35,13 @@ root.Jnes = function(_this) {
             nes.opts.emulateSound = true;
 
             for (var i = 3; i < this.canvasImageData.data.length-3; i += 4) {
-                this.canvasImageData.data[i] = 0xFF;
+              this.canvasImageData.data[i] = 0xFF;
             }
+
+            // DEFAULT SCREEN
+            this.setScreen = function(prop) {
+              return $(this.screen).animate(SCREENS[prop]);
+            };
 
             // KEYBOARD
             doc.bind('keydown', function(evt) {
