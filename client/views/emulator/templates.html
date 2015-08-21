@@ -1,7 +1,17 @@
 <template name="emulator">
-<canvas id="Emulator" width="256" height="240"></canvas>
+  <div id="Rom">
+    <div class="name fs40">{{ rom.name }}</div>
+    <div class="name fs20">{{ rom.description }}</div>
+
+    <canvas id="Emulator" width="256" height="240"></canvas>
     <div class="sigmar fs20 fps">{{ session 'status' }}</div>
     {{ > controls }}
+  </div>
+</template>
+
+<template name="upload">
+  <input type="file" class="dn" id="File" accept=".nes">
+  <a href="#" id="Play" class="btnd mt50">Upload and Play</a>
 </template>
 
 <template name="controls">

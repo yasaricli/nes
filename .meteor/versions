@@ -3,7 +3,7 @@ accounts-password@1.1.1
 accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
 alanning:roles@1.2.13
-aldeed:autoform@5.4.0
+aldeed:autoform@5.4.1
 aldeed:autoform-select2@2.0.2
 aldeed:collection2@2.3.3
 aldeed:delete-button@1.0.0
@@ -34,6 +34,7 @@ cfs:tempstore@0.1.5
 cfs:upload-http@0.0.20
 cfs:worker@0.1.4
 check@1.0.5
+chrismbeckett:toastr@2.1.2_1
 coffeescript@1.0.6
 copleykj:livestamp@1.1.7
 dburles:collection-helpers@1.0.3
@@ -43,7 +44,7 @@ deps@1.0.7
 ejson@1.0.6
 email@1.0.6
 fastclick@1.0.3
-fortawesome:fontawesome@4.3.0
+fortawesome:fontawesome@4.4.0
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -67,7 +68,7 @@ less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
-matb33:collection-hooks@0.7.13
+matb33:collection-hooks@0.7.14
 meteor@1.1.6
 meteor-platform@1.2.2
 minifiers@1.1.5
@@ -90,7 +91,7 @@ reactive-dict@1.1.0
 reactive-var@1.0.5
 reload@1.1.3
 retry@1.0.3
-reywood:publish-composite@1.3.6
+reywood:publish-composite@1.4.2
 routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
@@ -114,5 +115,5 @@ yasaricli:admin-styles@0.0.1
 yasaricli:dynamicaudio@0.0.1
 yasaricli:kalypto@0.0.4
 yasaricli:slugify@0.0.7
-yogiben:autoform-file@0.2.7
+yogiben:autoform-file@0.2.9
 zimme:active-route@2.1.0

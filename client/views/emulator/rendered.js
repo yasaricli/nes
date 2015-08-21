@@ -2,15 +2,19 @@
 Session.setDefault('status', '');
 
 Template.emulator.onRendered(function() {
-    var _this = this,
-        rom = this.data.rom(),
-        file = rom.file();
+  var _this = this;
+
+  // if rom found then
+  if (_.has(this.data, 'rom')) {
 
     // Run Jnes fn
     Nes = Jnes(_this);
 
+    var rom = this.data.rom(),
+        file = rom.file();
+
     // GET AJAX GAME URL
-    $.ajax({
+    return $.ajax({
         url: file.url(),
         xhr: function() {
             var xhr = $.ajaxSettings.xhr();
@@ -24,4 +28,5 @@ Template.emulator.onRendered(function() {
             Nes.start();
         }
     });
+  }
 });

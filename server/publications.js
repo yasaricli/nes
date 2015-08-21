@@ -30,3 +30,11 @@ Meteor.publishComposite('rom', function(slug) {
     ]
   };
 });
+
+Meteor.publishComposite('file', function(_id) {
+  return {
+    find: function() {
+      return Files.find({ _id: _id });
+    }
+  }
+});

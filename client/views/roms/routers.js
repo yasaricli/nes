@@ -7,6 +7,7 @@ Router.route('/', {
 
 Router.route('/rom/:slug', {
   name: 'Rom',
+  template: 'Emulator',
   waitOn: function() {
       return Meteor.subscribe('rom', this.params.slug);
   },
