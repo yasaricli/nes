@@ -41,6 +41,14 @@ Roms.attachSchema(new SimpleSchema({
     },
     active: {
       type: Boolean
+    },
+
+    /*
+     * When the user makes all the star's id there.
+     * */
+    stars: {
+        type: [String], // 'userId'
+        optional: true
     }
 }));
 
@@ -63,7 +71,7 @@ Roms.before.insert(function(userId, doc) {
 Roms.attachAdmin({
   name: 'Roms',
   list_display: ['name', 'active', 'stars'],
-  exclude: ['createdAt', 'slug'],
+  exclude: ['stars', 'createdAt', 'slug'],
   sort: { createdAt: -1 },
   security: true,
   list_per_page: 10,

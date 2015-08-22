@@ -14,6 +14,7 @@
   <div id="User">
     {{# if currentUser }}
       <a href="/">{{ currentUser.username }}</a>
+      <a href="/logout" class="logout resetborder">logout</a>
     {{ else }}
       <a href="{{ pathFor route='atSignIn' }}" class="resetborder">Sign In</a>
       <a href="{{ pathFor route='atSignUp' }}">Sign up</a>

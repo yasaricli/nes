@@ -50,6 +50,7 @@ a { text-decoration:none; color:white; }
 #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
 #Roms li .name { font-size:19px; font-weight:700; text-align:center; padding:10px; }
 #Roms li .createdAt { font-size:19px; text-align:center; color: #ccc; float: left; padding: 10px; }
+#Roms li .stars { padding: 10px; float:right; cursor:pointer; }
 #Roms li .createdAt .livestamp { font-size:13px; }
 #Roms li .description { padding:10px; }
 

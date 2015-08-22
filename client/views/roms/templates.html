@@ -6,6 +6,9 @@
         <div class="createdAt">
           <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
         </div>
+        <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
+          <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
+        </div>
         {{# if image }}
           <img src="{{ image.url }}">
         {{/if}}
