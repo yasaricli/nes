@@ -12,8 +12,12 @@ SCREENS = {
 };
 
 root.isAuthenticated = function(callback, $this) {
-  return callback && callback.call($this ? $this : {});
-}
+  return Meteor.userId() && callback.call($this ? $this : {});
+};
+
+Blaze.registerHelper('isAuthenticated', function() {
+  return Meteor.userId();
+});
 
 JSNES.DummyUI = function(nes) {
     this.nes = nes;
