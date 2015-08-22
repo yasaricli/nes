@@ -4,16 +4,9 @@
 
 <template name="layout">
   {{ > forkme }}
-  <div id="Header">
-    <div class="container clearfix">{{ > header }}</div>
-  </div>
   <div id="Main">
     <div class="container">{{ > yield }}</div>
   </div>
-</template>
-
-<template name="header">
-  {{> loginButtons }}
 </template>
 
 <template name="forkme">
