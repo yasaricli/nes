@@ -32,3 +32,5 @@ mquandalle:ismobile
 yasaricli:slugify
 yasaricli:admin
 chrismbeckett:toastr
+useraccounts:core
+useraccounts:iron-routing

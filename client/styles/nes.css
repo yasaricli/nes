@@ -28,6 +28,9 @@ a { text-decoration:none; color:white; }
 .mt50 { margin-top:50px; }
 .mt60 { margin-top:60px; }
 
+.resetborder { border:0px!important; }
+
+
 .remove { background-color:rgb(87, 11, 11)!important; }
 .remove:hover { background-color:rgb(73, 9, 9)!important; }
 
@@ -40,8 +43,8 @@ a { text-decoration:none; color:white; }
 #Roms { }
 #Roms li { width:256px; min-height:300px; float:left; background-color:rgb(39, 39, 39); margin:0 10px 10px 0; padding:5px; }
 
-#Roms li a, .btnd { display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; margin-bottom:10px; }
-#Roms li a:hover, .btnd:hover { background-color: #2F2F2F; }
+#Roms li a, .btnd, .at-btn { color:white; display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; margin-bottom:10px; border:0px; cursor:pointer; outline:none; }
+#Roms li a:hover, .btnd:hover, .at-btn:hover { background-color: #2F2F2F; }
 
 
 #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
@@ -50,7 +53,7 @@ a { text-decoration:none; color:white; }
 #Roms li .createdAt .livestamp { font-size:13px; }
 #Roms li .description { padding:10px; }
 
-#Rom { text-align:center; }
+#Rom { margin-top:50px; text-align:center; }
 #Rom .name, #Rom .description { font-family: 'Open Sans Condensed', sans-serif; }
 
 /* ACCOUNTS */
@@ -71,3 +74,12 @@ a { text-decoration:none; color:white; }
 .notFound { text-align:center; font-size:30px; margin-top:25px; }
 .notFound a { font-weight:bold; text-decoration:underline; }
 .fps { position:absolute; padding:9px; background-color:rgb(124, 14, 14); top:0px; left: 0px; right: 0px; margin: auto; width: 350px; }
+
+.at-input { margin-bottom:10px; }
+.at-error { color:red; }
+
+input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
+
+#User { position: absolute; right: 0px; top: 0px; margin: 20px; }
+#User a { border:1px solid white; padding: 7px; border-radius: 2px; }
+#User a:hover { background-color:white; color:#333; }

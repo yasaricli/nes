@@ -4,8 +4,20 @@
 
 <template name="layout">
   {{ > forkme }}
+  {{ > user }}
   <div id="Main">
     <div class="container">{{ > yield }}</div>
+  </div>
+</template>
+
+<template name="user">
+  <div id="User">
+    {{# if currentUser }}
+      <a href="/">{{ currentUser.username }}</a>
+    {{ else }}
+      <a href="{{ pathFor route='atSignIn' }}" class="resetborder">Sign In</a>
+      <a href="{{ pathFor route='atSignUp' }}">Sign up</a>
+    {{/if}}
   </div>
 </template>
 
