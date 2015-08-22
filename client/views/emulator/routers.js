@@ -1,7 +1,3 @@
-Router.route('/upload', {
-  name: 'Upload'
-});
-
 Router.route('/emulator/:_id', {
   name: 'Emulator',
   waitOn: function() {

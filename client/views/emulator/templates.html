@@ -11,7 +11,14 @@
 
 <template name="upload">
   <input type="file" class="dn" id="File" accept=".nes">
-  <a href="#" id="Play" class="btnd mt50">Upload and Play</a>
+  <a href="#" id="Play" class="resetborder mr10">
+    <i class="fa fa-upload"></i>
+    {{# if uploadQueue.isRunning }}
+      Uploading..
+    {{ else }}
+      Upload and Play
+    {{/if}}
+  </a>
 </template>
 
 <template name="controls">

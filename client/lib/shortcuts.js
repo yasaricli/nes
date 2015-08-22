@@ -19,6 +19,10 @@ Blaze.registerHelper('isAuthenticated', function() {
   return Meteor.userId();
 });
 
+Blaze.registerHelper('uploadQueue', function() {
+  return FS.HTTP.uploadQueue;
+});
+
 JSNES.DummyUI = function(nes) {
     this.nes = nes;
     this.enable = function() {};

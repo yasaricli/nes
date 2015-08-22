@@ -12,6 +12,7 @@
 
 <template name="user">
   <div id="User">
+    {{ > upload }}
     {{# if isAuthenticated }}
       <a href="/">{{ currentUser.username }}</a>
       <a href="/logout" class="logout resetborder">logout</a>

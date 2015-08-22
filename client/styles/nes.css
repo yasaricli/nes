@@ -28,6 +28,8 @@ a { text-decoration:none; color:white; }
 .mt50 { margin-top:50px; }
 .mt60 { margin-top:60px; }
 
+.mr10 { margin-right:10px; }
+
 .resetborder { border:0px!important; }
 
 
@@ -81,7 +83,7 @@ a { text-decoration:none; color:white; }
 
 input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
 
-#User { position: absolute; right: 0px; top: 0px; margin: 20px; }
+#User { font-weight:bold; position: absolute; right: 0px; top: 0px; margin: 20px; }
 #User a { border:1px solid white; padding: 7px; border-radius: 2px; }
 #User a:hover { background-color:white; color:#333; }
 
