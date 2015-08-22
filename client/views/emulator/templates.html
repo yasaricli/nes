@@ -1,12 +1,19 @@
 <template name="emulator">
-  <div id="Rom">
-    <div class="name fs40">{{ rom.name }}</div>
-    <div class="name fs20">{{ rom.description }}</div>
+  {{# if rom }}
+    <div id="Rom">
+      <div class="name fs40">{{ rom.name }}</div>
+      <div class="name fs20">{{ rom.description }}</div>
 
-    <canvas id="Emulator" width="256" height="240"></canvas>
-    <div class="sigmar fs20 fps">{{ session 'status' }}</div>
-    {{ > controls }}
-  </div>
+      <canvas id="Emulator" width="256" height="240"></canvas>
+      <div class="sigmar fs20 fps">{{ session 'status' }}</div>
+      {{ > controls }}
+    </div>
+  {{ else }}
+    <div class="notFound condensed">
+      <div class="fs40">No Rom.</div>
+      <div>Go to the <a href="{{ pathFor route='Roms' }}">roms</a> page.</div>
+    </div>
+  {{/if}}
 </template>
 
 <template name="upload">
