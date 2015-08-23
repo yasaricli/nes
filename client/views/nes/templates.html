@@ -14,6 +14,9 @@
   <div id="User">
     {{ > upload }}
     {{# if isAuthenticated }}
+      {{# if isInRole 'admin'}}
+        <a href="{{ pathFor route='AdminDashboard' }}" class="admin">admin</a>
+      {{/if}}
       <a href="/">{{ currentUser.username }}</a>
       <a href="/logout" class="logout resetborder">logout</a>
     {{ else }}

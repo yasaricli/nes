@@ -87,4 +87,7 @@ input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
 #User a { border:1px solid white; padding: 7px; border-radius: 2px; }
 #User a:hover { background-color:white; color:#333; }
 
+#User a.admin { color:yellow; border-color:yellow; }
+#User a.admin:hover { color:black; background-color:yellow; }
+
 .fa-star, .fa-star-o:hover { color:yellow; }
