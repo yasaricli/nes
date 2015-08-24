@@ -11,18 +11,6 @@ SCREENS = {
   }
 };
 
-root.isAuthenticated = function(callback, $this) {
-  return Meteor.userId() && callback.call($this ? $this : {});
-};
-
-Blaze.registerHelper('isAuthenticated', function() {
-  return Meteor.userId();
-});
-
-Blaze.registerHelper('uploadQueue', function() {
-  return FS.HTTP.uploadQueue;
-});
-
 JSNES.DummyUI = function(nes) {
     this.nes = nes;
     this.enable = function() {};
