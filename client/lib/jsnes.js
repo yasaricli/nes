@@ -162,7 +162,9 @@ JSNES.prototype = {
             }
         }
         this.fpsFrameCount++;
-        this.lastFrameTime = +new Date();
+
+        // merged change https://github.com/bfirsh/jsnes/commit/4709e195c2a26d3022c439e41326fd71519b35c8
+        // this.lastFrameTime = +new Date();
     },
 
     printFps: function() {
