@@ -1,5 +1,6 @@
 // Default sessions
-Session.setDefault('status', '');
+Session.setDefault('watchId', null);
+Session.setDefault('status', null);
 
 Template.emulator.onRendered(function() {
   var _this = this;

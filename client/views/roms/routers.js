@@ -11,7 +11,7 @@ Router.route('/watch/:id', {
   data: function() {
     var params = this.params;
     return {
-      streamId: function() {
+      watchId: function() {
         return params.id;
       }
     }

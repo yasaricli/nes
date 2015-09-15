@@ -91,3 +91,5 @@ input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
 #User a.admin:hover { color:black; background-color:yellow; }
 
 .fa-star, .fa-star-o:hover { color:yellow; }
+
+.live-link { border-radius:0px!important; width: 200px; margin: auto; }

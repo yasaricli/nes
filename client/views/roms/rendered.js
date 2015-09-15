@@ -6,7 +6,7 @@ Template.watch.onRendered(function() {
   WatchStream.on('watch', function(data) {
 
     // equal data id to game id.
-    if (_.isEqual(self.data.streamId(), data._id)) {
+    if (_.isEqual(self.data.watchId(), data._id)) {
 
       // new game draw image
       var img = new Image();

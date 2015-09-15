@@ -28,7 +28,7 @@ root.Jnes = function(_this) {
             this.canvasImageData = this.canvasContext.getImageData(0, 0, 256, 240);
 
             // watch Stream id
-            this.watchId = Random.id(50);
+            Session.set('watchId', Random.id(25));
 
             // options
             nes.opts.emulateSound = true;
@@ -102,7 +102,7 @@ root.Jnes = function(_this) {
 
                 // send stream
                 WatchStream.emit('watch', {
-                  _id: this.watchId,
+                  _id: Session.get('watchId'),
                   toDataURL: this.screen.toDataURL()
                 });
 
