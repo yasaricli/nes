@@ -7,7 +7,10 @@ Admin.configure({
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
-  notFoundTemplate: 'notFound'
+  notFoundTemplate: 'notFound',
+
+  // Page View Tracking
+  trackPageView: true
 });
 
 AccountsTemplates.configure({
