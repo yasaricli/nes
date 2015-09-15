@@ -5,6 +5,19 @@ Router.route('/', {
   }
 });
 
+Router.route('/watch/:id', {
+  name: 'Watch',
+
+  data: function() {
+    var params = this.params;
+    return {
+      streamId: function() {
+        return params.id;
+      }
+    }
+  }
+});
+
 Router.route('/rom/:slug', {
   name: 'Rom',
   template: 'Emulator',
