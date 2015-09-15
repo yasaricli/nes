@@ -27,6 +27,9 @@ root.Jnes = function(_this) {
             this.canvasContext = this.screen.getContext('2d');
             this.canvasImageData = this.canvasContext.getImageData(0, 0, 256, 240);
 
+            // watch Stream id
+            Session.set('watchId', Random.id(25));
+
             // options
             nes.opts.emulateSound = true;
 
@@ -85,6 +88,7 @@ root.Jnes = function(_this) {
             this.writeFrame = function(buffer, prevBuffer) {
                 var imageData = this.canvasImageData.data,
                     pixel, i, j;
+
                 for (i=0; i<256*240; i++) {
                     pixel = buffer[i];
                     if (pixel != prevBuffer[i]) {
@@ -95,6 +99,13 @@ root.Jnes = function(_this) {
                         prevBuffer[i] = pixel;
                     }
                 }
+
+                // send stream
+                WatchStream.emit('watch', {
+                  _id: Session.get('watchId'),
+                  toDataURL: this.screen.toDataURL()
+                });
+
                 this.canvasContext.putImageData(this.canvasImageData, 0, 0);
             };
         }
