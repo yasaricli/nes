@@ -6,11 +6,6 @@
 
       <canvas id="Emulator" width="256" height="240"></canvas>
       <div class="sigmar fs20 fps">{{ session 'status' }}</div>
-
-      <a class="live-link btn btn-success" href="{{ pathFor route='Watch' id=watchId }}" target="_blank">
-        Watch your friends.
-      </a>
-
       {{ > controls }}
     </div>
   {{ else }}
