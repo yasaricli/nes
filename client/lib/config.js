@@ -13,12 +13,15 @@ Router.configure({
   trackPageView: true
 });
 
+
+// avatar config
+Avatar.setOptions({});
+
 AccountsTemplates.configure({
   enablePasswordChange: true,
   homeRoutePath: '/',
   showLabels: false
 });
-
 
 AccountsTemplates.configureRoute('signIn');
 AccountsTemplates.configureRoute('signUp');

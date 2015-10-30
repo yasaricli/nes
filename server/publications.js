@@ -1,3 +1,26 @@
+Meteor.publishComposite('profile', function(username) {
+  return {
+    find: function() {
+      return Users.find({ username: username });
+    },
+    children: [
+      {
+        find: function(user) {
+          return Roms.find({ stars: user._id });
+        },
+
+        children: [
+          {
+            find: function(rom) {
+              return Images.find({ _id: rom.imageId });
+            }
+          }
+        ]
+      }
+    ]
+  }
+});
+
 Meteor.publishComposite('roms', {
   find: function() {
     return Roms.find({ });

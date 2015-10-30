@@ -1,0 +1,11 @@
+<template name="profile">
+  <div class="profile">
+    <div class="bio">
+      {{> avatar user=profile size='extra-large' }}
+      <div class="name sigmar">{{ profile.username }}</div>
+    </div>
+    <div class="stars">
+      {{ > roms safe=true }}
+    </div>
+  </div>
+</template>

@@ -60,6 +60,9 @@ iron:location@1.0.9
 iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
+jparker:crypto-core@0.1.0
+jparker:crypto-md5@0.1.1
+jparker:gravatar@0.3.1
 jquery@1.11.3_2
 json@1.0.3
 lai:collection-extensions@0.1.4
@@ -72,6 +75,7 @@ logging@1.0.7
 matb33:collection-hooks@0.7.14
 meteor@1.1.6
 meteor-platform@1.2.2
+meteorhacks:inject-initial@1.0.2
 minifiers@1.1.5
 minimongo@1.0.8
 mizzao:timesync@0.3.3
@@ -110,6 +114,7 @@ url@1.0.4
 useraccounts:core@1.12.0
 useraccounts:iron-routing@1.12.0
 useraccounts:unstyled@1.11.1
+utilities:avatar@0.9.0
 vazco:universe-autoform-select@0.1.8
 webapp@1.2.0
 webapp-hashing@1.0.3

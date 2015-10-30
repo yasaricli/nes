@@ -7,6 +7,10 @@ var root = this,
 
       uploadQueue: function() {
         return FS.HTTP.uploadQueue;
+      },
+
+      isEqual: function(a, b) {
+        return _.isEqual(a, b);
       }
     };
 

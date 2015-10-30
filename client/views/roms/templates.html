@@ -1,19 +1,25 @@
 <template name="roms">
-  <span class="anton fs40">ROMS</span>
+  <span class="anton fs40">
+    {{# unless safe }}
+      ROMS
+    {{ /unless }}
+  </span>
   <ul id="Roms" class="clearfix">
-    {{#each roms }}
+    {{# each roms }}
       <li>
-        <div class="createdAt">
-          <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
-        </div>
-        <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
-          <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
-        </div>
+        {{# unless ../safe }}
+          <div class="createdAt">
+            <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
+          </div>
+          <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
+            <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
+          </div>
+        {{/unless}}
         {{# if image }}
           <img src="{{ image.url }}">
         {{/if}}
         <div class="name">{{ name }}</div>
-          <a href="{{ pathFor route='Rom' }}">PLAY</a>
+        <a href="{{ pathFor route='Rom' }}">PLAY</a>
       </li>
     {{ else }}
       <li class="empty sigmar">no roms!</li>

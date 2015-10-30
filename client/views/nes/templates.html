@@ -9,7 +9,9 @@
   {{ > forkme }}
   {{ > user }}
   <div id="Main">
-    <div class="container">{{ > yield }}</div>
+    <div class="container">
+      {{ > yield }}
+    </div>
   </div>
 </template>
 
@@ -20,7 +22,7 @@
       {{# if isInRole 'admin'}}
         <a href="{{ pathFor route='AdminDashboard' }}" class="admin">admin</a>
       {{/if}}
-      <a href="/">{{ currentUser.username }}</a>
+      <a href="{{ pathFor route='Profile' username=currentUser.username }}">{{ currentUser.username }}</a>
       <a href="/logout" class="logout resetborder">logout</a>
     {{ else }}
       <a href="{{ pathFor route='atSignIn' }}" class="resetborder">Sign In</a>
@@ -36,7 +38,9 @@
 </template>
 
 <template name="loading">
-  <div class="loading sigmar">loading..</div>
+  <div class="loading sigmar">
+    <img src="/loading.gif" width="50">
+  </div>
 </template>
 
 <template name="notFound">
