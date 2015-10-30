@@ -8,8 +8,6 @@ Install and Run
     $ cd nes
     $ meteor
 
-Follow progress on Libreboard here [Nes board][Nes].
-
 Uses
 =======
 Admin package [yasaricli:admin][Admin]
