@@ -3,12 +3,8 @@ var pwd = AccountsTemplates.removeField('password');
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
-  notFoundTemplate: 'notFound',
-
-  // Page View Tracking
-  trackPageView: true
+  notFoundTemplate: 'notFound'
 });
-
 
 // avatar config
 Avatar.setOptions({});

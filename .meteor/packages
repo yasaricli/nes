@@ -17,7 +17,6 @@ fortawesome:fontawesome
 aldeed:autoform-select2
 aldeed:autoform
 vazco:universe-autoform-select
-yogiben:autoform-file
 ongoworks:security
 alanning:roles
 cfs:data-man
@@ -26,7 +25,6 @@ accounts-base
 accounts-ui
 accounts-password
 mizzao:user-status
-yasaricli:dynamicaudio
 mquandalle:ismobile
 yasaricli:slugify
 chrismbeckett:toastr
@@ -48,3 +46,5 @@ random
 ejson
 spacebars
 check
+useraccounts:unstyled
+yogiben:autoform-file
