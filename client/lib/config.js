@@ -1,9 +1,5 @@
 var pwd = AccountsTemplates.removeField('password');
 
-Admin.configure({
-  title: 'Nes Admin'
-});
-
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
