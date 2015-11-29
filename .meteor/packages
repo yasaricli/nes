@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 insecure
 iron:router
 reywood:publish-composite
@@ -18,7 +17,6 @@ fortawesome:fontawesome
 aldeed:autoform-select2
 aldeed:autoform
 vazco:universe-autoform-select
-yogiben:autoform-file
 ongoworks:security
 alanning:roles
 cfs:data-man
@@ -27,13 +25,26 @@ accounts-base
 accounts-ui
 accounts-password
 mizzao:user-status
-yasaricli:dynamicaudio
 mquandalle:ismobile
 yasaricli:slugify
-yasaricli:admin
 chrismbeckett:toastr
 useraccounts:core
 useraccounts:iron-routing
 lepozepo:streams
-reywood:iron-router-ga
 utilities:avatar
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+useraccounts:unstyled
+yogiben:autoform-file

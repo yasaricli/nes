@@ -1,27 +1,21 @@
-// Default sessions
-Session.setDefault('watchId', null);
-Session.setDefault('status', null);
-
 Template.emulator.onRendered(function() {
-  var _this = this;
+  const self = this;
+  const file = this.data.rom().file();
 
-  // if rom found then
-  if (_.has(this.data, 'rom')) {
+  this.cfxnes = new CFxNES({});
 
-    // Run Jnes fn
-    Nes = Jnes(_this);
+  // output
+  this.cfxnes.setVideoOutput(this.find("#Emulator"));
 
-    var rom = this.data.rom(),
-        file = rom.file();
+  /// Success, run the emulator
+  this.cfxnes.downloadCartridge(file.url()).then(function() {
 
-    // Get file
-    return getFile(file, function(data) {
+    self.cfxnes.start();
+  })
+});
 
-      // load
-      Nes.loadRom(data);
 
-      // start
-      Nes.start();
-    });
-  }
+Template.emulator.onDestroyed(function() {
+
+  this.cfxnes.stop();
 });

@@ -1,18 +1,10 @@
 var pwd = AccountsTemplates.removeField('password');
 
-Admin.configure({
-  title: 'Nes Admin'
-});
-
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
-  notFoundTemplate: 'notFound',
-
-  // Page View Tracking
-  trackPageView: true
+  notFoundTemplate: 'notFound'
 });
-
 
 // avatar config
 Avatar.setOptions({});
