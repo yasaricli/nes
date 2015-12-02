@@ -1,17 +1,16 @@
 Router.route('/', {
   name: 'Roms',
-  waitOn: function() {
+  waitOn() {
     return Meteor.subscribe('roms');
   }
 });
 
 Router.route('/watch/:id', {
   name: 'Watch',
-
-  data: function() {
-    var params = this.params;
+  data() {
+    const params = this.params;
     return {
-      watchId: function() {
+      watchId() {
         return params.id;
       }
     }
@@ -21,13 +20,13 @@ Router.route('/watch/:id', {
 Router.route('/rom/:slug', {
   name: 'Rom',
   template: 'Emulator',
-  waitOn: function() {
-      return Meteor.subscribe('rom', this.params.slug);
+  waitOn() {
+    return Meteor.subscribe('rom', this.params.slug);
   },
   data: function() {
-    var params = this.params;
+    const params = this.params;
     return {
-      rom: function() {
+      rom() {
         return Roms.findOne({ slug: params.slug });
       }
     }

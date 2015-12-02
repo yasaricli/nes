@@ -1,14 +1,14 @@
 Template.upload.events({
-  'change #File': function(event, template) {
+  'change #File'(event, template) {
 
     // each all files
-    FS.Utility.eachFile(event, function(file) {
+    FS.Utility.eachFile(event, (file) => {
 
       // insert file
-      Files.insert(file, function(err, fileObj) {
+      Files.insert(file, (err, fileObj) => {
 
         // is uploaded file then
-        fileObj.on('uploaded', function() {
+        fileObj.on('uploaded', () => {
 
           // go to emulator.
           Router.go('Emulator', {
@@ -18,7 +18,8 @@ Template.upload.events({
       });
     });
   },
-  'click #Play': function(event, template) {
+
+  'click #Play'(event, template) {
     template.find('#File').click();
   }
 });

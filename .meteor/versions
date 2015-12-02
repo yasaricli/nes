@@ -124,6 +124,7 @@ standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
 tracker@1.0.9
+udondan:jszip@2.4.0_1
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5
@@ -131,7 +132,7 @@ useraccounts:core@1.12.4
 useraccounts:iron-routing@1.12.4
 useraccounts:unstyled@1.12.4
 utilities:avatar@0.9.2
-vazco:universe-autoform-select@0.1.16
+vazco:universe-autoform-select@0.1.18
 webapp@1.2.3
 webapp-hashing@1.0.5
 yasaricli:slugify@0.0.7

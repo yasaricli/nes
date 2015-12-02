@@ -1,22 +1,22 @@
 Template.roms.events({
-  'click .setStar': function(event, template) {
-    var hasStar = _.contains(this.stars, Meteor.userId()),
-        starObj = { stars: Meteor.userId() };
+  'click .setStar'(event, template) {
+    const hasStar = _.contains(this.stars, Meteor.userId());
+    const starObj = { stars: Meteor.userId() };
 
-    return isAuthenticated(function() {
-       // pull remove star
-       if (hasStar) {
-           return Roms.update(this._id, { $pull: starObj });
-       }
+    return isAuthenticated(() => {
+      // pull remove star
+      if (hasStar) {
+        return Roms.update(this._id, { $pull: starObj });
+      }
 
-       // $push insert stars list
-       Roms.update(this._id, { $push: starObj });
+      // $push insert stars list
+      Roms.update(this._id, { $push: starObj });
     }, this);
   },
 
-  'click .remove': function(event, template) {
+  'click .remove'(event, template) {
     event.preventDefault();
-    return isAuthenticated(function() {
+    return isAuthenticated(() => {
 
       // Remove
       Roms.remove(this._id);

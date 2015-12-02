@@ -135,13 +135,13 @@ module$core$src$utils$objects.setProperties = setProperties$$module$core$src$uti
 module$core$src$utils$objects.nullProperties = nullProperties$$module$core$src$utils$objects;
 module$core$src$utils$objects.makeEnumeration = makeEnumeration$$module$core$src$utils$objects;
 // Input 1
-var module$core$src$common$Region = {}, Region$$module$core$src$common$Region = {NTSC:{id:"ntsc", name:"NTSC", framesPerSecond:60, cpuFrequency:1789773, ppuClipTopBottom:!0, frameCounterMax4:[7457, 7456, 7458, 7457, 1, 1], frameCounterMax5:[7457, 7456, 7458, 7458, 7452, 1], noiseChannelTimerPeriods:[4, 8, 16, 32, 64, 96, 128, 160, 202, 254, 380, 508, 762, 1016, 2034, 4068], dmcChannelTimerPeriods:[428, 380, 340, 320, 286, 254, 226, 214, 190, 160, 142, 128, 106, 84, 72, 54]}, PAL:{id:"pal", name:"PAL", 
+var module$core$src$common$Region = {}, Region$$module$core$src$common$Region = {NTSC:{id:"ntsc", name:"NTSC", framesPerSecond:60, cpuFrequency:1789773, ppuClipTopBottom:!0, frameCounterMax4:[7457, 7456, 7458, 7457, 1, 1], frameCounterMax5:[7457, 7456, 7458, 7458, 7452, 1], noiseChannelTimerPeriods:[4, 8, 16, 32, 64, 96, 128, 160, 202, 254, 380, 508, 762, 1016, 2034, 4068], dmcChannelTimerPeriods:[428, 380, 340, 320, 286, 254, 226, 214, 190, 160, 142, 128, 106, 84, 72, 54]}, PAL:{id:"pal", name:"PAL",
 framesPerSecond:50, cpuFrequency:1491477.5, ppuClipTopBottom:!1, frameCounterMax4:[8313, 8314, 8312, 8313, 1, 1], frameCounterMax5:[8313, 8314, 8312, 8314, 8312, 1], noiseChannelTimerPeriods:[4, 8, 14, 30, 60, 88, 118, 148, 188, 236, 354, 472, 708, 944, 1890, 3778], dmcChannelTimerPeriods:[398, 354, 316, 298, 276, 236, 210, 198, 176, 148, 132, 118, 98, 78, 66, 50]}};
 module$core$src$utils$objects.makeEnumeration(Region$$module$core$src$common$Region);
 var $jscompDefaultExport$$module$core$src$common$Region = Region$$module$core$src$common$Region;
 module$core$src$common$Region.default = $jscompDefaultExport$$module$core$src$common$Region;
 // Input 2
-var module$core$src$common$constants = {}, VIDEO_WIDTH$$module$core$src$common$constants = 256, VIDEO_HEIGHT$$module$core$src$common$constants = 240, RESET$$module$core$src$common$constants = 1, NMI$$module$core$src$common$constants = 2, IRQ_APU$$module$core$src$common$constants = 4, IRQ_DCM$$module$core$src$common$constants = 8, IRQ_EXT$$module$core$src$common$constants = 16, IRQ$$module$core$src$common$constants = IRQ_APU$$module$core$src$common$constants | IRQ_DCM$$module$core$src$common$constants | 
+var module$core$src$common$constants = {}, VIDEO_WIDTH$$module$core$src$common$constants = 256, VIDEO_HEIGHT$$module$core$src$common$constants = 240, RESET$$module$core$src$common$constants = 1, NMI$$module$core$src$common$constants = 2, IRQ_APU$$module$core$src$common$constants = 4, IRQ_DCM$$module$core$src$common$constants = 8, IRQ_EXT$$module$core$src$common$constants = 16, IRQ$$module$core$src$common$constants = IRQ_APU$$module$core$src$common$constants | IRQ_DCM$$module$core$src$common$constants |
 IRQ_EXT$$module$core$src$common$constants, LENGTH_COUNTER_VALUES$$module$core$src$common$constants = [10, 254, 20, 2, 40, 4, 80, 6, 160, 8, 60, 10, 14, 12, 26, 14, 12, 16, 24, 18, 48, 20, 96, 22, 192, 24, 72, 26, 16, 28, 32, 30];
 module$core$src$common$constants.VIDEO_WIDTH = VIDEO_WIDTH$$module$core$src$common$constants;
 module$core$src$common$constants.VIDEO_HEIGHT = VIDEO_HEIGHT$$module$core$src$common$constants;
@@ -330,7 +330,7 @@ NES$$module$core$src$NES.prototype.updateRegionParams = function() {
 };
 module$core$src$NES.default = NES$$module$core$src$NES;
 // Input 7
-var module$core$src$common$Mirroring = {}, Mirroring$$module$core$src$common$Mirroring = {SINGLE_SCREEN_0:{id:"single-screen-0", name:"Single screen (0)", areas:[0, 0, 0, 0]}, SINGLE_SCREEN_1:{id:"single-screen-1", name:"Single screen (1)", areas:[1, 1, 1, 1]}, SINGLE_SCREEN_2:{id:"single-screen-2", name:"Single screen (2)", areas:[2, 2, 2, 2]}, SINGLE_SCREEN_3:{id:"single-screen-3", name:"Single screen (3)", areas:[3, 3, 3, 3]}, HORIZONTAL:{id:"horizontal", name:"Horizontal", areas:[0, 0, 1, 1]}, 
+var module$core$src$common$Mirroring = {}, Mirroring$$module$core$src$common$Mirroring = {SINGLE_SCREEN_0:{id:"single-screen-0", name:"Single screen (0)", areas:[0, 0, 0, 0]}, SINGLE_SCREEN_1:{id:"single-screen-1", name:"Single screen (1)", areas:[1, 1, 1, 1]}, SINGLE_SCREEN_2:{id:"single-screen-2", name:"Single screen (2)", areas:[2, 2, 2, 2]}, SINGLE_SCREEN_3:{id:"single-screen-3", name:"Single screen (3)", areas:[3, 3, 3, 3]}, HORIZONTAL:{id:"horizontal", name:"Horizontal", areas:[0, 0, 1, 1]},
 VERTICAL:{id:"vertical", name:"Vertical", areas:[0, 1, 0, 1]}, FOUR_SCREEN:{id:"four-screen", name:"Four screen", areas:[0, 1, 2, 3]}, getSingleScreen:function(a) {
   switch(a) {
     case 0:
@@ -2123,7 +2123,7 @@ module$core$src$palettes$fceu_13.default = $jscompDefaultExport$$module$core$src
 var module$core$src$palettes$bmf_fin_r3 = {}, $jscompDefaultExport$$module$core$src$palettes$bmf_fin_r3 = "aGhoABKZGgiqUQKafgBpjgAcfgMBURgAHzcAAU4AAFoAAFAcAEBhAAAAAAAAAAAAubm5DFzXUDXwiRnguwyzzgxhwCsOlU0BYW8AH4sAAZgMAJNLAIGbAAAAAAAAAAAA////Y7T/m5H/03f/72r/+WjA+X1s7Zstvb0WfNocS+hHNeWRP9ndYGBgAAAAAAAA////rOf/1c3/7br/+LD//rDs/b21+dKO6Ot8u/OCmfeiivXQkvTxvr6+AAAAAAAA";
 module$core$src$palettes$bmf_fin_r3.default = $jscompDefaultExport$$module$core$src$palettes$bmf_fin_r3;
 // Input 34
-var module$core$src$factories$PaletteFactory = {}, FALLBACK$$module$core$src$factories$PaletteFactory = "fceux", palettes$$module$core$src$factories$PaletteFactory = {"asq-real-a":module$core$src$palettes$asq_real_a.default, "asq-real-b":module$core$src$palettes$asq_real_b.default, "bmf-fin-r2":module$core$src$palettes$bmf_fin_r2.default, "bmf-fin-r3":module$core$src$palettes$bmf_fin_r3.default, "fceu-13":module$core$src$palettes$fceu_13.default, "fceu-15":module$core$src$palettes$fceu_15.default, 
+var module$core$src$factories$PaletteFactory = {}, FALLBACK$$module$core$src$factories$PaletteFactory = "fceux", palettes$$module$core$src$factories$PaletteFactory = {"asq-real-a":module$core$src$palettes$asq_real_a.default, "asq-real-b":module$core$src$palettes$asq_real_b.default, "bmf-fin-r2":module$core$src$palettes$bmf_fin_r2.default, "bmf-fin-r3":module$core$src$palettes$bmf_fin_r3.default, "fceu-13":module$core$src$palettes$fceu_13.default, "fceu-15":module$core$src$palettes$fceu_15.default,
 fceux:module$core$src$palettes$fceux.default, "nestopia-rgb":module$core$src$palettes$nestopia_rgb.default, "nestopia-yuv":module$core$src$palettes$nestopia_yuv.default}, PaletteFactory$$module$core$src$factories$PaletteFactory = function() {
 };
 PaletteFactory$$module$core$src$factories$PaletteFactory.prototype.createPalette = function(a) {
@@ -2143,8 +2143,8 @@ PaletteFactory$$module$core$src$factories$PaletteFactory.prototype.readPalette =
 };
 module$core$src$factories$PaletteFactory.default = PaletteFactory$$module$core$src$factories$PaletteFactory;
 // Input 35
-for (var module$core$src$units$PPU = {}, F_RENDER$$module$core$src$units$PPU = 2, F_FETCH_NT$$module$core$src$units$PPU = 4, F_FETCH_AT$$module$core$src$units$PPU = 8, F_FETCH_BGL$$module$core$src$units$PPU = 16, F_FETCH_BGH$$module$core$src$units$PPU = 32, F_FETCH_SPL$$module$core$src$units$PPU = 64, F_FETCH_SPH$$module$core$src$units$PPU = 128, F_COPY_BG$$module$core$src$units$PPU = 256, F_SHIFT_BG$$module$core$src$units$PPU = 512, F_EVAL_SP$$module$core$src$units$PPU = 1024, F_CLIP_LEFT$$module$core$src$units$PPU = 
-2048, F_CLIP_TB$$module$core$src$units$PPU = 4096, F_INC_CX$$module$core$src$units$PPU = 8192, F_INC_FY$$module$core$src$units$PPU = 16384, F_COPY_HS$$module$core$src$units$PPU = 32768, F_COPY_VS$$module$core$src$units$PPU = 65536, F_VB_START$$module$core$src$units$PPU = 131072, F_VB_START2$$module$core$src$units$PPU = 262144, F_VB_END$$module$core$src$units$PPU = 524288, F_SKIP$$module$core$src$units$PPU = 1048576, cycleFlags$$module$core$src$units$PPU = module$core$src$utils$system.newUintArray(341), 
+for (var module$core$src$units$PPU = {}, F_RENDER$$module$core$src$units$PPU = 2, F_FETCH_NT$$module$core$src$units$PPU = 4, F_FETCH_AT$$module$core$src$units$PPU = 8, F_FETCH_BGL$$module$core$src$units$PPU = 16, F_FETCH_BGH$$module$core$src$units$PPU = 32, F_FETCH_SPL$$module$core$src$units$PPU = 64, F_FETCH_SPH$$module$core$src$units$PPU = 128, F_COPY_BG$$module$core$src$units$PPU = 256, F_SHIFT_BG$$module$core$src$units$PPU = 512, F_EVAL_SP$$module$core$src$units$PPU = 1024, F_CLIP_LEFT$$module$core$src$units$PPU =
+2048, F_CLIP_TB$$module$core$src$units$PPU = 4096, F_INC_CX$$module$core$src$units$PPU = 8192, F_INC_FY$$module$core$src$units$PPU = 16384, F_COPY_HS$$module$core$src$units$PPU = 32768, F_COPY_VS$$module$core$src$units$PPU = 65536, F_VB_START$$module$core$src$units$PPU = 131072, F_VB_START2$$module$core$src$units$PPU = 262144, F_VB_END$$module$core$src$units$PPU = 524288, F_SKIP$$module$core$src$units$PPU = 1048576, cycleFlags$$module$core$src$units$PPU = module$core$src$utils$system.newUintArray(341),
 i = 0;i < cycleFlags$$module$core$src$units$PPU.length;i++) {
   1 <= i && 256 >= i && (cycleFlags$$module$core$src$units$PPU[i] |= F_RENDER$$module$core$src$units$PPU, cycleFlags$$module$core$src$units$PPU[i] |= F_CLIP_TB$$module$core$src$units$PPU);
   if (1 === (i & 7) || 339 === i) {
@@ -2175,7 +2175,7 @@ cycleFlags$$module$core$src$units$PPU[338] |= F_SKIP$$module$core$src$units$PPU;
 for (var scanlineFlags$$module$core$src$units$PPU = module$core$src$utils$system.newUintArray(262), i$16 = 0;i$16 < scanlineFlags$$module$core$src$units$PPU.length;i$16++) {
   239 >= i$16 && (scanlineFlags$$module$core$src$units$PPU[i$16] |= F_RENDER$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_SHIFT_BG$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_CLIP_LEFT$$module$core$src$units$PPU);
   if (239 >= i$16 || 261 === i$16) {
-    scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_NT$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_AT$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_BGL$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_BGH$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_SPL$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= 
+    scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_NT$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_AT$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_BGL$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_BGH$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_FETCH_SPL$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |=
     F_FETCH_SPH$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_COPY_BG$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_EVAL_SP$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_INC_CX$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_INC_FY$$module$core$src$units$PPU, scanlineFlags$$module$core$src$units$PPU[i$16] |= F_COPY_HS$$module$core$src$units$PPU;
   }
   if (7 >= i$16 || 232 <= i$16 && 239 >= i$16) {
@@ -3332,7 +3332,7 @@ NROMMapper$$module$core$src$mappers$NROMMapper.prototype.reset = function() {
 };
 module$core$src$mappers$NROMMapper.default = NROMMapper$$module$core$src$mappers$NROMMapper;
 // Input 47
-var module$core$src$factories$MapperFactory = {}, mappers$$module$core$src$factories$MapperFactory = {NROM:module$core$src$mappers$NROMMapper.default, MMC1:module$core$src$mappers$MMC1Mapper.default, UNROM:module$core$src$mappers$UNROMMapper.default, CNROM:module$core$src$mappers$CNROMMapper.default, MMC3:module$core$src$mappers$MMC3Mapper.default, AOROM:module$core$src$mappers$AOROMMapper.default, BNROM:module$core$src$mappers$BNROMMapper.default, ColorDreams:module$core$src$mappers$ColorDreamsMapper.default, 
+var module$core$src$factories$MapperFactory = {}, mappers$$module$core$src$factories$MapperFactory = {NROM:module$core$src$mappers$NROMMapper.default, MMC1:module$core$src$mappers$MMC1Mapper.default, UNROM:module$core$src$mappers$UNROMMapper.default, CNROM:module$core$src$mappers$CNROMMapper.default, MMC3:module$core$src$mappers$MMC3Mapper.default, AOROM:module$core$src$mappers$AOROMMapper.default, BNROM:module$core$src$mappers$BNROMMapper.default, ColorDreams:module$core$src$mappers$ColorDreamsMapper.default,
 "NINA-001":module$core$src$mappers$NINA001Mapper.default}, MapperFactory$$module$core$src$factories$MapperFactory = function(a) {
   this.injector = a;
 };
@@ -3493,7 +3493,7 @@ DeviceFactory$$module$core$src$factories$DeviceFactory.prototype.createDevice = 
 };
 module$core$src$factories$DeviceFactory.default = DeviceFactory$$module$core$src$factories$DeviceFactory;
 // Input 52
-var module$core$src$config = {}, $jscompDefaultExport$$module$core$src$config = {nes:{class:module$core$src$NES.default}, cpu:{class:module$core$src$units$CPU.default}, ppu:{class:module$core$src$units$PPU.default}, apu:{class:module$core$src$units$APU.default}, dma:{class:module$core$src$units$DMA.default}, cpuMemory:{class:module$core$src$units$CPUMemory.default}, ppuMemory:{class:module$core$src$units$PPUMemory.default}, cartridgeFactory:{class:module$core$src$factories$CartridgeFactory.default}, 
+var module$core$src$config = {}, $jscompDefaultExport$$module$core$src$config = {nes:{class:module$core$src$NES.default}, cpu:{class:module$core$src$units$CPU.default}, ppu:{class:module$core$src$units$PPU.default}, apu:{class:module$core$src$units$APU.default}, dma:{class:module$core$src$units$DMA.default}, cpuMemory:{class:module$core$src$units$CPUMemory.default}, ppuMemory:{class:module$core$src$units$PPUMemory.default}, cartridgeFactory:{class:module$core$src$factories$CartridgeFactory.default},
 deviceFactory:{class:module$core$src$factories$DeviceFactory.default}, mapperFactory:{class:module$core$src$factories$MapperFactory.default}, paletteFactory:{class:module$core$src$factories$PaletteFactory.default}, hash:{value:null}, jszip:{value:null}};
 module$core$src$config.default = $jscompDefaultExport$$module$core$src$config;
 // Input 53
@@ -3631,7 +3631,7 @@ function roundUpToPowerOf2$$module$core$src$utils$math(a) {
 }
 module$core$src$utils$math.roundUpToPowerOf2 = roundUpToPowerOf2$$module$core$src$utils$math;
 // Input 57
-var module$lib$src$devices$adapters$JoypadAdapter = {}, buttonAliases$$module$lib$src$devices$adapters$JoypadAdapter = {a:module$core$src$devices$Joypad.Button.A, b:module$core$src$devices$Joypad.Button.B, select:module$core$src$devices$Joypad.Button.SELECT, start:module$core$src$devices$Joypad.Button.START, up:module$core$src$devices$Joypad.Button.UP, down:module$core$src$devices$Joypad.Button.DOWN, left:module$core$src$devices$Joypad.Button.LEFT, right:module$core$src$devices$Joypad.Button.RIGHT}, 
+var module$lib$src$devices$adapters$JoypadAdapter = {}, buttonAliases$$module$lib$src$devices$adapters$JoypadAdapter = {a:module$core$src$devices$Joypad.Button.A, b:module$core$src$devices$Joypad.Button.B, select:module$core$src$devices$Joypad.Button.SELECT, start:module$core$src$devices$Joypad.Button.START, up:module$core$src$devices$Joypad.Button.UP, down:module$core$src$devices$Joypad.Button.DOWN, left:module$core$src$devices$Joypad.Button.LEFT, right:module$core$src$devices$Joypad.Button.RIGHT},
 JoypadAdapter$$module$lib$src$devices$adapters$JoypadAdapter = function(a) {
   this.joypad = a;
 };
@@ -3663,7 +3663,7 @@ ZapperAdapter$$module$lib$src$devices$adapters$ZapperAdapter.prototype.stateChan
 };
 module$lib$src$devices$adapters$ZapperAdapter.default = ZapperAdapter$$module$lib$src$devices$adapters$ZapperAdapter;
 // Input 59
-var module$lib$src$renderers$WebGLRenderer = {}, VERTEX_SHADER_SOURCE$$module$lib$src$renderers$WebGLRenderer = "\n  uniform   vec2 uScreenSize;\n  attribute vec2 aVertexPosition;\n  attribute vec2 aTextureCoord;\n  varying   vec2 vTextureCoord;\n\n  void main(void) {\n    float x = aVertexPosition.x / (0.5 * uScreenSize.x) - 1.0; // [-1, 1] -> [0, width]\n    float y = 1.0 - aVertexPosition.y / (0.5 * uScreenSize.y); // [-1, 1] -> [height, 0]\n    gl_Position = vec4(x, y, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n  }\n", 
+var module$lib$src$renderers$WebGLRenderer = {}, VERTEX_SHADER_SOURCE$$module$lib$src$renderers$WebGLRenderer = "\n  uniform   vec2 uScreenSize;\n  attribute vec2 aVertexPosition;\n  attribute vec2 aTextureCoord;\n  varying   vec2 vTextureCoord;\n\n  void main(void) {\n    float x = aVertexPosition.x / (0.5 * uScreenSize.x) - 1.0; // [-1, 1] -> [0, width]\n    float y = 1.0 - aVertexPosition.y / (0.5 * uScreenSize.y); // [-1, 1] -> [height, 0]\n    gl_Position = vec4(x, y, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n  }\n",
 FRAGMENT_SHADER_SOURCE$$module$lib$src$renderers$WebGLRenderer = "\n  precision mediump float;\n\n  uniform sampler2D uSampler;\n  varying vec2      vTextureCoord;\n\n  void main(void) {\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n  }\n", WebGLRenderer$$module$lib$src$renderers$WebGLRenderer = function(a) {
   this.canvas = a;
   this.initWebGL();
@@ -4095,8 +4095,8 @@ Gamepad$$module$lib$src$devices$Gamepad.prototype.getInputName = function(a) {
 };
 module$lib$src$devices$Gamepad.default = Gamepad$$module$lib$src$devices$Gamepad;
 // Input 66
-var module$lib$src$devices$Keyboard = {}, keyCodeAliases$$module$lib$src$devices$Keyboard = {48:"0", 49:"1", 50:"2", 51:"3", 52:"4", 53:"5", 54:"6", 55:"7", 56:"8", 57:"9", 65:"a", 66:"b", 67:"c", 68:"d", 69:"e", 70:"f", 71:"g", 72:"h", 73:"i", 74:"j", 75:"k", 76:"l", 77:"m", 78:"n", 79:"o", 80:"p", 81:"q", 82:"r", 83:"s", 84:"t", 85:"u", 86:"v", 87:"w", 88:"x", 89:"y", 90:"z", 186:";", 187:"=", 188:",", 189:"-", 190:".", 191:"/", 192:"`", 219:"[", 220:"\\", 221:"]", 222:"'", 112:"f1", 113:"f2", 
-114:"f3", 115:"f4", 116:"f5", 117:"f6", 118:"f7", 119:"f8", 120:"f9", 121:"f10", 122:"f11", 123:"f12", 13:"enter", 16:"shift", 17:"ctrl", 18:"alt", 8:"backspace", 9:"tab", 27:"escape", 32:"space", 37:"left", 38:"up", 39:"right", 40:"down", 46:"delete", 45:"insert", 36:"home", 35:"end", 33:"page-up", 34:"page-down", 19:"pause", 20:"caps-lock", 144:"num-lock", 145:"scroll-lock", 96:"numpad-0", 97:"numpad-1", 98:"numpad-2", 99:"numpad-3", 100:"numpad-4", 101:"numpad-5", 102:"numpad-6", 103:"numpad-7", 
+var module$lib$src$devices$Keyboard = {}, keyCodeAliases$$module$lib$src$devices$Keyboard = {48:"0", 49:"1", 50:"2", 51:"3", 52:"4", 53:"5", 54:"6", 55:"7", 56:"8", 57:"9", 65:"a", 66:"b", 67:"c", 68:"d", 69:"e", 70:"f", 71:"g", 72:"h", 73:"i", 74:"j", 75:"k", 76:"l", 77:"m", 78:"n", 79:"o", 80:"p", 81:"q", 82:"r", 83:"s", 84:"t", 85:"u", 86:"v", 87:"w", 88:"x", 89:"y", 90:"z", 186:";", 187:"=", 188:",", 189:"-", 190:".", 191:"/", 192:"`", 219:"[", 220:"\\", 221:"]", 222:"'", 112:"f1", 113:"f2",
+114:"f3", 115:"f4", 116:"f5", 117:"f6", 118:"f7", 119:"f8", 120:"f9", 121:"f10", 122:"f11", 123:"f12", 13:"enter", 16:"shift", 17:"ctrl", 18:"alt", 8:"backspace", 9:"tab", 27:"escape", 32:"space", 37:"left", 38:"up", 39:"right", 40:"down", 46:"delete", 45:"insert", 36:"home", 35:"end", 33:"page-up", 34:"page-down", 19:"pause", 20:"caps-lock", 144:"num-lock", 145:"scroll-lock", 96:"numpad-0", 97:"numpad-1", 98:"numpad-2", 99:"numpad-3", 100:"numpad-4", 101:"numpad-5", 102:"numpad-6", 103:"numpad-7",
 104:"numpad-8", 105:"numpad-9", 106:"multiply", 107:"add", 109:"subtract", 110:"decimal-point", 111:"divide"}, Keyboard$$module$lib$src$devices$Keyboard = function(a) {
   this.dependencies = ["inputManager", "videoManager"];
   this.id = a;
@@ -4863,7 +4863,7 @@ PersistenceManager$$module$lib$src$managers$PersistenceManager.prototype.writeCo
 };
 module$lib$src$managers$PersistenceManager.default = PersistenceManager$$module$lib$src$managers$PersistenceManager;
 // Input 74
-var module$lib$src$config = {}, $jscompDefaultExport$$module$lib$src$config = module$core$src$utils$objects.mergeProperties(module$core$src$config.default, {deviceFactory:{class:module$lib$src$factories$DeviceFactory.default}, rendererFactory:{class:module$lib$src$factories$RendererFactory.default}, storageFactory:{class:module$lib$src$factories$StorageFactory.default}, audioManager:{class:module$lib$src$managers$AudioManager.default}, cartridgeManager:{class:module$lib$src$managers$CartridgeManager.default}, 
+var module$lib$src$config = {}, $jscompDefaultExport$$module$lib$src$config = module$core$src$utils$objects.mergeProperties(module$core$src$config.default, {deviceFactory:{class:module$lib$src$factories$DeviceFactory.default}, rendererFactory:{class:module$lib$src$factories$RendererFactory.default}, storageFactory:{class:module$lib$src$factories$StorageFactory.default}, audioManager:{class:module$lib$src$managers$AudioManager.default}, cartridgeManager:{class:module$lib$src$managers$CartridgeManager.default},
 executionManager:{class:module$lib$src$managers$ExecutionManager.default}, inputManager:{class:module$lib$src$managers$InputManager.default}, persistenceManager:{class:module$lib$src$managers$PersistenceManager.default}, videoManager:{class:module$lib$src$managers$VideoManager.default}, screenfull:{value:null}});
 module$lib$src$config.default = $jscompDefaultExport$$module$lib$src$config;
 // Input 75

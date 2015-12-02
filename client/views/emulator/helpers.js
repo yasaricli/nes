@@ -1,7 +1,7 @@
 Template.emulator.helpers({
 
   // Random watch Id
-  watchId: function() {
+  watchId() {
     return Session.get('watchId');
   }
 });

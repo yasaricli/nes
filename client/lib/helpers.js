@@ -1,39 +1,40 @@
-var root = this,
+const root = this;
 
-    HELPERS = {
-      isAuthenticated: function() {
+const HELPERS = {
+      isAuthenticated() {
         return Meteor.userId();
       },
 
-      uploadQueue: function() {
+      uploadQueue() {
         return FS.HTTP.uploadQueue;
       },
 
-      isEqual: function(a, b) {
+      isEqual(a, b) {
         return _.isEqual(a, b);
+      },
+
+      session(key) {
+        return Session.get(key);
+      },
+
+      excerpt(text, limit) {
+        return text.substring(0, limit) + (text.length > limit  ? '...' : '');
+      },
+
+      contains(list, _id) {
+        return _.contains(list, _id);
+      },
+
+      hasStar() {
+        return _.contains(this.stars, Meteor.userId());
       }
     };
 
-
-root.isAuthenticated = function(callback, $this) {
+root.isAuthenticated = (callback, $this) => {
   return Meteor.userId() && callback.call($this ? $this : {});
 };
 
-root.getFile = function(file, callback) {
-  return $.ajax({
-    url: file.url(),
-    xhr: function() {
-      var xhr = $.ajaxSettings.xhr();
-      xhr.overrideMimeType('text/plain; charset=x-user-defined');
-      return xhr;
-    },
-    complete: function(xhr, status) {
-      callback(xhr.responseText);
-    }
-  });
-};
-
 // REGISTER
-_.each(HELPERS, function(fn, name) {
+_.each(HELPERS, (fn, name) => {
   Blaze.registerHelper(name, fn);
 });

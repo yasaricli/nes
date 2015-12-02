@@ -1,14 +1,14 @@
 Router.route('/emulator/:_id', {
   name: 'Emulator',
-  waitOn: function() {
+  waitOn() {
     return Meteor.subscribe('file', this.params._id);
   },
-  data: function() {
-    var params = this.params;
+  data() {
+    const params = this.params;
     return {
-      rom: function() {
+      rom() {
         return {
-          file: function() {
+          file() {
             return Files.findOne(params._id);
           }
         }

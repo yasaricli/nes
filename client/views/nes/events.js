@@ -1,5 +1,5 @@
 Template.user.events({
-  'click .logout': function(event, template) {
+  'click .logout'(event, template) {
     event.preventDefault();
 
     // logout

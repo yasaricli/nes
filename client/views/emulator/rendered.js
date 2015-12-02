@@ -2,7 +2,7 @@ Template.emulator.onRendered(function() {
   const self = this;
   const file = this.data.rom().file();
 
-  this.cfxnes = new CFxNES({});
+  this.cfxnes = nes = new CFxNES({});
 
   // output
   this.cfxnes.setVideoOutput(this.find("#Emulator"));
@@ -16,6 +16,5 @@ Template.emulator.onRendered(function() {
 
 
 Template.emulator.onDestroyed(function() {
-
   this.cfxnes.stop();
 });

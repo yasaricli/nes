@@ -1,1 +1,1 @@
-var root = this;
+const root = this;

@@ -1,15 +1,15 @@
 Router.route('/~:username', {
   name: 'Profile',
-  waitOn: function() {
+  waitOn() {
       return Meteor.subscribe('profile', this.params.username);
   },
-  data: function() {
-    var params = this.params;
+  data() {
+    const params = this.params;
     return {
-      profile: function() {
+      profile() {
         return Users.findOne({ username: params.username });
       },
-      roms: function() {
+      roms() {
         return Roms.find();
       }
     }

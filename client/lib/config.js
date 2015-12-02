@@ -1,4 +1,4 @@
-var pwd = AccountsTemplates.removeField('password');
+const pwd = AccountsTemplates.removeField('password');
 
 Router.configure({
   layoutTemplate: 'layout',

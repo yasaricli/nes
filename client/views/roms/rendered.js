@@ -1,15 +1,15 @@
 Template.watch.onRendered(function() {
-  var self = this,
-      context = this.find('#Emulator').getContext('2d');
+  const self = this;
+  const context = this.find('#Emulator').getContext('2d');
 
   // watch connect
-  WatchStream.on('watch', function(data) {
+  WatchStream.on('watch', (data) => {
 
     // equal data id to game id.
     if (_.isEqual(self.data.watchId(), data._id)) {
 
       // new game draw image
-      var img = new Image();
+      const img = new Image();
       img.src = data.toDataURL;
 
       // draw image

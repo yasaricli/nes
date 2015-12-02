@@ -1,17 +1,17 @@
-Meteor.publishComposite('profile', function(username) {
+Meteor.publishComposite('profile', (username) => {
   return {
-    find: function() {
+    find() {
       return Users.find({ username: username });
     },
     children: [
       {
-        find: function(user) {
+        find(user) {
           return Roms.find({ stars: user._id });
         },
 
         children: [
           {
-            find: function(rom) {
+            find(rom) {
               return Images.find({ _id: rom.imageId });
             }
           }
@@ -22,31 +22,31 @@ Meteor.publishComposite('profile', function(username) {
 });
 
 Meteor.publishComposite('roms', {
-  find: function() {
+  find() {
     return Roms.find({ });
   },
   children: [
     {
-      find: function(rom) {
+      find(rom) {
         return Images.find({ _id: rom.imageId });
       }
     }
   ]
 });
 
-Meteor.publishComposite('rom', function(slug) {
+Meteor.publishComposite('rom', (slug) => {
   return { 
-    find: function() {
+    find() {
       return Roms.find({ slug: slug });
     },
     children: [
       {
-        find: function(rom) {
+        find(rom) {
           return Files.find({ _id: rom.fileId });
         }
       },
       {
-        find: function(rom) {
+        find(rom) {
           return Images.find({ _id: rom.imageId });
         }
       }
@@ -54,9 +54,9 @@ Meteor.publishComposite('rom', function(slug) {
   };
 });
 
-Meteor.publishComposite('file', function(_id) {
+Meteor.publishComposite('file', (_id) => {
   return {
-    find: function() {
+    find() {
       return Files.find({ _id: _id });
     }
   }
