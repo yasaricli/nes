@@ -99,3 +99,5 @@ input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
 .profile .stars { float:left; width:75%; }
 .profile .avatar { width:200px; height:200px; }
 .profile .name { font-size:25px; text-align:center; }
+
+.more { margin:auto; }

@@ -1,5 +1,8 @@
 Roms = new Mongo.Collection("roms");
 
+// perPage
+Roms.attachPaginated(12);
+
 Roms.attachSchema(new SimpleSchema({
     name: {
       type: String

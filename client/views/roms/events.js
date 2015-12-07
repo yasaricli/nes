@@ -21,5 +21,11 @@ Template.roms.events({
       // Remove
       Roms.remove(this._id);
     }, this);
+  },
+
+  'click .more'() {
+
+    // Next
+    Roms.paginated.next();
   }
 });

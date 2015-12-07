@@ -21,17 +21,20 @@ Meteor.publishComposite('profile', (username) => {
   }
 });
 
-Meteor.publishComposite('roms', {
-  find() {
-    return Roms.find({ });
-  },
-  children: [
-    {
-      find(rom) {
-        return Images.find({ _id: rom.imageId });
+
+Meteor.publishComposite('roms', (limit) => {
+  return {
+    find() {
+      return Roms.find({ }, { sort: { createdAt: -1 }, limit: limit });
+    },
+    children: [
+      {
+        find(rom) {
+          return Images.find({ _id: rom.imageId });
+        }
       }
-    }
-  ]
+    ]
+  }
 });
 
 Meteor.publishComposite('rom', (slug) => {

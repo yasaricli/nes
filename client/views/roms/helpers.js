@@ -1,5 +1,9 @@
 Template.roms.helpers({
   roms(prop) {
-    return Roms.find({ }, { sort: { createdAt: -1 } });
+    return Roms.find({});
+  },
+  
+  hasNext() {
+    return Roms.paginated.hasNext();
   }
 });

@@ -1,7 +1,7 @@
 Router.route('/', {
   name: 'Roms',
   waitOn() {
-    return Meteor.subscribe('roms');
+    return Roms.paginated.subscribe();
   }
 });
 
