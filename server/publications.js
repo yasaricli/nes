@@ -22,10 +22,10 @@ Meteor.publishComposite('profile', (username) => {
 });
 
 
-Meteor.publishComposite('roms', (limit) => {
+Meteor.publishComposite('roms', (limit, filter) => {
   return {
     find() {
-      return Roms.find({ }, { sort: { createdAt: -1 }, limit: limit });
+      return Roms.find(filter, { sort: { createdAt: -1 }, limit: limit });
     },
     children: [
       {

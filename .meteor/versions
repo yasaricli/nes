@@ -135,6 +135,6 @@ utilities:avatar@0.9.2
 vazco:universe-autoform-select@0.1.18
 webapp@1.2.3
 webapp-hashing@1.0.5
-yasaricli:paginated@0.0.2
+yasaricli:paginated@0.0.3
 yasaricli:slugify@0.0.7
 yogiben:autoform-file@0.3.0
