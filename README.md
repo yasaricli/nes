@@ -13,4 +13,4 @@ Install and Run
 Import a Games 
 =============
 
-    $ mongorestore -h 127.0.0.1:3001 --db meteor .dump/02112015
+    $ mongorestore -h 127.0.0.1:3001 --db meteor .backups/02112015
