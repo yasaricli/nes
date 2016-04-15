@@ -14,3 +14,6 @@ Import a Games
 =============
 
     $ mongorestore -h 127.0.0.1:3001 --db meteor .backups/02112015
+
+### THANKS
+JavaScript NES emulator and emulation library [@jpikl](https://github.com/jpikl) - [cfxnes](https://github.com/jpikl/cfxnes)
