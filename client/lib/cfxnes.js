@@ -1,4 +1,3 @@
-(function(){// Input 0
 var $jscomp = {scope:{}, global:this}, Symbol=this.Symbol;
 $jscomp.initSymbol = function() {
   $jscomp.global.Symbol || (Symbol = $jscomp.Symbol);
@@ -5112,8 +5111,5 @@ CFxNES$$module$lib$src$CFxNES.version = "unknown";
 CFxNES$$module$lib$src$CFxNES.setLogLevel = function(a) {
   module$core$src$utils$logger.default.setLevel(logLevelAliases$$module$lib$src$CFxNES[a] || module$core$src$utils$logger.LogLevel.WARN);
 };
-"function" === typeof define && define.amd ? define("CFxNES", function() {
-  return CFxNES$$module$lib$src$CFxNES;
-}) : "undefined" !== typeof module && module.exports ? module.exports = CFxNES$$module$lib$src$CFxNES : this.CFxNES = CFxNES$$module$lib$src$CFxNES;
-module$lib$src$CFxNES.default = CFxNES$$module$lib$src$CFxNES;
-this.CFxNES.version="0.4.0";}.call(this));
+this.CFxNES = CFxNES$$module$lib$src$CFxNES;
+this.CFxNES.version="0.4.0";

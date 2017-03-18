@@ -1,20 +1,5 @@
 Router.route('/', {
-  name: 'Roms',
-  waitOn() {
-    return Roms.paginated.subscribe();
-  }
-});
-
-Router.route('/watch/:id', {
-  name: 'Watch',
-  data() {
-    const params = this.params;
-    return {
-      watchId() {
-        return params.id;
-      }
-    }
-  }
+  name: 'Roms'
 });
 
 Router.route('/rom/:slug', {

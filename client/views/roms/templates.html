@@ -1,40 +1,24 @@
 <template name="roms">
-  <span class="anton fs40">
-    {{# unless safe }}
-      ROMS
-    {{ /unless }}
-  </span>
-  <ul id="Roms" class="clearfix">
-    {{# each roms }}
-      <li>
-        {{# unless ../safe }}
+  {{ # unless safe }}
+    <span class="anton fs40">ROMS</span>
+  {{/unless}}
+  {{# if Template.subscriptionsReady }}
+    <ul id="Roms" class="clearfix">
+      {{# each roms }}
+        <li>
           <div class="createdAt">
             <i class="fa fa-clock-o"></i> {{ livestamp createdAt }}
           </div>
-          <div class="stars {{# if currentUser }}setStar{{else}}no-auth{{/if}}">
-            <i class="fa fa {{# if hasStar }}fa-star{{ else }}fa-star-o{{/if}}"></i> {{ stars.length }}
-          </div>
-        {{/unless}}
-        {{# if image }}
+          {{ > likeButton _id=_id }}
           <img src="{{ image.url }}">
-        {{/if}}
-        <div class="name">{{ name }}</div>
-        <a href="{{ pathFor route='Rom' }}">PLAY</a>
-      </li>
-    {{ else }}
-      <li class="empty sigmar">no roms!</li>
-    {{/each}}
-  </ul>
-  {{# if hasNext }}
-    <button class="more btnd">See More</button>
-  {{/if }}
-</template>
-
-<template name="watch">
-  <div id="Rom">
-    <div class="name fs40">
-      {{ > live }}
-    </div>
-    <canvas id="Emulator" width="256" height="240"></canvas>
-  </div>
+          <div class="name">{{ name }}</div>
+          <a href="{{ pathFor route='Rom' }}">PLAY</a>
+        </li>
+      {{ else }}
+        <li class="empty sigmar">no roms!</li>
+      {{/each}}
+    </ul>
+  {{ else }}
+    {{ > loading }}
+  {{/if}}
 </template>

@@ -1,3 +1,5 @@
+import { LikeButton } from 'meteor/color:like-button';
+
 Meteor.publishComposite('profile', (username) => {
   return {
     find() {
@@ -21,12 +23,26 @@ Meteor.publishComposite('profile', (username) => {
   }
 });
 
-
-Meteor.publishComposite('roms', (limit, filter) => {
+Meteor.publishComposite('roms', (safe) => {
   return {
     find() {
-      return Roms.find(filter, { sort: { createdAt: -1 }, limit: limit });
+      let filter = {};
+
+      if (safe) {
+        filter._id = {
+          $in: LikeButton.collection.find({ userId: this.userId }).map((doc) => {
+            return doc.likedId
+          })
+        }
+      }
+
+      return Roms.find(filter, {
+        sort: {
+          createdAt: -1
+        }
+      });
     },
+
     children: [
       {
         find(rom) {

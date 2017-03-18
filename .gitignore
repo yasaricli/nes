@@ -1,3 +1,5 @@
 # text editors
 *~
 *.swp
+
+node_modules/

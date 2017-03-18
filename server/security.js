@@ -1,6 +1,5 @@
 // ROMS COLLECTION
-Roms.permit(['insert', 'remove']).ifHasRole('admin').apply();
-Roms.permit('update').ifLoggedIn().onlyProps(['stars']).apply();
+Roms.permit(['insert', 'remove', 'update']).ifHasRole('admin').apply();
 
 // FILES COLLECTION
 Files.files.permit(['remove', 'update']).ifHasRole('admin').apply();

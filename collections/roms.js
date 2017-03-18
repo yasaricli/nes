@@ -1,71 +1,55 @@
 Roms = new Mongo.Collection("roms");
 
-// perPage
-Roms.attachPaginated(12);
+// Attach behaviour with the default options
+Roms.attachBehaviour('timestampable');
 
 Roms.attachSchema(new SimpleSchema({
-    name: {
-      type: String
-    },
-    slug: {
-      type: String,
-      optional: true
-    },
-    description: {
-      type: String,
-      optional: true,
-      autoform: {
-        type: 'textarea'
-      }
-    },
-    createdAt: {
-      type: Date,
-      denyUpdate: true
-    },
-    fileId: {
-      type: String,
-      label: 'Nes File',
-      autoform: {
-        afFieldInput: {
-          type: 'fileUpload',
-          collection: 'Files'
-        }
-      }
-    },
-    imageId: {
-      type: String,
-      label: 'Nes Image',
-      autoform: {
-        afFieldInput: {
-          type: 'fileUpload',
-          collection: 'Images'
-        }
-      }
-    },
-    active: {
-      type: Boolean
-    },
+  name: {
+    type: String
+  },
 
-    /*
-     * When the user makes all the star's id there.
-     * */
-    stars: {
-        type: [String], // 'userId'
-        optional: true
+  slug: {
+    type: String,
+    optional: true
+  },
+
+  description: {
+    type: String,
+    optional: true,
+    autoform: {
+      type: 'textarea'
     }
+  },
+
+  fileId: {
+    type: String,
+    label: 'Nes File',
+    autoform: {
+      afFieldInput: {
+        type: 'fileUpload',
+        collection: 'Files'
+      }
+    }
+  },
+
+  imageId: {
+    type: String,
+    label: 'Nes Image',
+    autoform: {
+      afFieldInput: {
+        type: 'fileUpload',
+        collection: 'Images'
+      }
+    }
+  }
 }));
 
 Roms.helpers({
   file: function() {
     return Files.findOne(this.fileId);
   },
+
   image: function() {
     return Images.findOne(this.imageId);
   }
-});
-
-// HOOKS
-Roms.before.insert(function(userId, doc) {
-  doc.createdAt = new Date();
-  doc.slug = slugify(doc.name);
 });
