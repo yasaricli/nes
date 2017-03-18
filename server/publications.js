@@ -100,3 +100,11 @@ Meteor.publishComposite('file', (_id) => {
     }
   }
 });
+
+Meteor.publishComposite('images', (_id) => {
+  return {
+    find() {
+      return Images.find({ });
+    }
+  }
+});
