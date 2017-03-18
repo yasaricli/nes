@@ -23,3 +23,13 @@ Template.upload.events({
     template.find('#File').click();
   }
 });
+
+Template.emulator.events({
+  'click .screen'(event, instance) {
+    instance.nes.fullscreen.enter();
+  },
+
+  'click .refresh'(event, instance) {
+    instance.nes.reset();
+  }
+});

@@ -1,0 +1,71 @@
+{
+  "name": "cfxnes",
+  "version": "0.6.0",
+  "description": "Library for NES emulation",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "emulator",
+    "nes"
+  ],
+  "author": "Jan Pikl <pikl.jan@gmail.com>",
+  "homepage": "https://github.com/jpikl/cfxnes",
+  "bugs": {
+    "url": "https://github.com/jpikl/cfxnes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpikl/cfxnes"
+  },
+  "files": [
+    "dist/",
+    "API.md"
+  ],
+  "main": "dist/cfxnes.js",
+  "scripts": {
+    "dev": "npm run watch:debug",
+    "build": "node build.js",
+    "build:debug": "node build.js --debug",
+    "watch": "watch 'npm run build' src ../core/src",
+    "watch:debug": "watch 'npm run build:debug' src ../core/src",
+    "lint": "eslint src test",
+    "test:src": "karma start --browsers=Chromium --target=src --no-polyfills",
+    "test:lib": "karma start --browsers=Chromium --target=lib --no-polyfills",
+    "test:lib:debug": "karma start --browsers=Chromium --target=debug-lib --no-polyfills",
+    "test": "karma start --browsers=Chromium,Firefox,Opera --no-polyfills",
+    "test:win": "karma start --browsers=IE,Edge --win-webdriver-host=10.0.0.4",
+    "test:osx": "karma start --browsers=Safari --osx-webdriver-host=10.0.0.3",
+    "clean": "rm -rf dist",
+    "pretest:lib": "npm run build",
+    "pretest:lib:debug": "npm run build:debug",
+    "pretest": "npm run build",
+    "pretest:win": "npm run build",
+    "pretest:osx": "npm run build",
+    "postbuild": "mkdir -p ../app/dist/static && cp dist/cfxnes.js ../app/dist/static/cfxnes.js",
+    "postbuild:debug": "mkdir -p ../app/dist/static && cp dist/cfxnes.debug.js ../app/dist/static/cfxnes.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.3.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "core-js": "^2.4.1",
+    "eslint": "^3.13.1",
+    "eslint-plugin-import": "^2.2.0",
+    "google-closure-compiler": "^20161201.0.0",
+    "ip": "^1.1.3",
+    "jszip": "^3.1.2",
+    "karma": "^1.4.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chai-plugins": "^0.8.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-webdriver-launcher": "^1.0.4",
+    "mocha": "^3.0.2",
+    "watch": "^1.0.1"
+  }
+}

@@ -1,20 +1,21 @@
+import cfxnes from '/imports/cfxnes/lib/src/cfxnes';
+
 Template.emulator.onRendered(function() {
-  const self = this;
   const file = this.data.rom().file();
 
-  this.cfxnes = nes = new CFxNES({});
+  this.nes = cfxnes({
+    video: {
+      scale: 1
+    }
+  });
 
-  // output
-  this.cfxnes.setVideoOutput(this.find("#Emulator"));
+  this.nes.rom.load(file.url()).then((data) => {
 
-  /// Success, run the emulator
-  this.cfxnes.downloadCartridge(file.url()).then(function() {
-
-    self.cfxnes.start();
+    // start
+    this.nes.start();
   })
 });
 
-
 Template.emulator.onDestroyed(function() {
-  this.cfxnes.stop();
+  this.nes.stop();
 });
