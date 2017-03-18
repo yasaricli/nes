@@ -73,6 +73,26 @@ Meteor.publishComposite('rom', (slug) => {
   };
 });
 
+Meteor.publishComposite('rom._id', (_id) => {
+  return { 
+    find() {
+      return Roms.find({ _id });
+    },
+    children: [
+      {
+        find(rom) {
+          return Files.find({ _id: rom.fileId });
+        }
+      },
+      {
+        find(rom) {
+          return Images.find({ _id: rom.imageId });
+        }
+      }
+    ]
+  };
+});
+
 Meteor.publishComposite('file', (_id) => {
   return {
     find() {

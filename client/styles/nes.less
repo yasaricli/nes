@@ -1,0 +1,113 @@
+body { padding:0px; margin:0px;  background-color:#000; }
+
+#NesSurface {
+  color:#fff; font-family: helvetica, arial, 'lucida grande', sans-serif;
+
+  #Header { background-color:rgb(39, 39, 39); height:50px; }
+  #Main { }
+  #Footer { }
+
+  .container { width:830px; margin:auto; }
+
+  input, textarea { padding:10px; outline:none; border:0px; font-family: 'Open Sans Condensed', sans-serif; font-size:25px; resize:none; }
+  label { display:block; }
+
+  .form-group { margin:10px 0 10px 0; }
+  .help-block { color:red; }
+
+  ul,li { list-style:none; margin:0px; padding:0px; }
+  a { text-decoration:none; color:white; }
+
+  .fs13 { font-size:13px; }
+  .fs20 { font-size:20px; }
+  .fs30 { font-size:30px; }
+  .fs40 { font-size:40px!important; }
+  .dn { display:none; }
+
+  .mt10 { margin-top:10px; }
+  .mt20 { margin-top:20px; }
+  .mt30 { margin-top:30px; }
+  .mt40 { margin-top:40px; }
+  .mt50 { margin-top:50px; }
+  .mt60 { margin-top:60px; }
+
+  .mr10 { margin-right:10px; }
+
+  .resetborder { border:0px!important; }
+
+
+  .remove { background-color:rgb(87, 11, 11)!important; }
+  .remove:hover { background-color:rgb(73, 9, 9)!important; }
+
+  .no-auth { cursor:default!important; color:rgba(204, 204, 204, 0.28); }
+
+  .clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
+  .empty { text-align:center; margin:0px!important; padding:0px!important; background-color:black!important; width:100%!important; color:#ccc; }
+  .forkme { position: absolute; top: 0; left: 0; border: 0; }
+
+  #Roms { }
+  #Roms li { width:256px; min-height:300px; float:left; background-color:rgb(39, 39, 39); margin:0 10px 10px 0; padding:5px; }
+
+  #Roms li a, .btnd, .at-btn { color:white; display:block; text-align:center; font-family: 'Anton', sans-serif;  font-size:30px; background-color: #333; margin-bottom:10px; border:0px; cursor:pointer; outline:none; }
+  #Roms li a:hover, .btnd:hover, .at-btn:hover { background-color: #2F2F2F; }
+
+
+  #Roms li .name, #Roms li .description { display:block; font-family: 'Open Sans Condensed', sans-serif; }
+  #Roms li .name { font-size:19px; font-weight:700; text-align:center; padding:10px; }
+  #Roms li .createdAt { font-size:19px; text-align:center; color: #ccc; float: left; padding: 10px; }
+  #Roms li .stars { padding: 10px; float:right; cursor:pointer; }
+  #Roms li .createdAt .livestamp { font-size:13px; }
+  #Roms li .description { padding:10px; }
+
+  #Rom { margin-top:50px; text-align:center; }
+  #Rom .name, #Rom .description { font-family: 'Open Sans Condensed', sans-serif; }
+
+  /* ACCOUNTS */
+  .accounts-dialog { background-color:rgb(39, 39, 39); border:0px; color:white; }
+  .accounts-dialog input { color:#333; padding:10px!important; border-radius:0px!important; border:0px!important; }
+  #login-buttons a { font-size: 16px; text-decoration: none; }
+  #login-buttons { margin-top:18px; float:right; }
+  #login-buttons .login-button, .accounts-dialog .login-button { background-color:#333; border:0px; border-radius:0px; font-size:18px; margin-bottom:10px; }
+  #login-buttons .login-button:hover, .accounts-dialog .login-button:hover { background-color:#2F2F2F; }
+  .accounts-dialog .error-message { background-color: rgb(108, 28, 28); color: white; padding: 10px; text-align: center; font-size:15px; }
+  .accounts-dialog { box-shadow:0 0 0px 0; -webkit-box-shadow:0 0 0px 0; border-radius:0px; }
+
+  .loading { padding: 50px; text-align: center; font-size: 40px; }
+
+  #insertRomForm {   background-color: rgb(39, 39, 39); padding: 30px; }
+  #Controls { width:400px; margin:20px auto; color:rgb(195, 138, 35); }
+  .controls-header { background-color:rgb(195, 138, 35); color:white; }
+  .notFound { text-align:center; font-size:30px; margin-top:25px; }
+  .notFound a { font-weight:bold; text-decoration:underline; }
+  .fps { position:absolute; padding:9px; background-color:rgb(124, 14, 14); top:0px; left: 0px; right: 0px; margin: auto; width: 350px; }
+
+  .at-input { margin-bottom:10px; }
+  .at-error { color:red; }
+
+  input { background-color: black; border-bottom: 1px solid #ccc; color:white; }
+
+  #User { font-weight:bold; position: absolute; right: 0px; top: 0px; margin: 20px; }
+  #User a { border-bottom: 2px solid white; padding: 7px; }
+  #User a:hover { background-color:white; color:#333; }
+
+  #User a.admin { color:yellow; border-color:yellow; }
+  #User a.admin:hover { color:black; background-color:yellow; }
+
+  .fa-star, .fa-star-o:hover { color:yellow; }
+
+  .live-link { border-radius:0px!important; width: 200px; margin: auto; }
+
+  .profile { margin-top:50px; overflow:hidden; }
+  .profile .bio { float:left; width:25%; }
+  .profile .stars { float:left; width:75%; }
+  .profile .avatar { width:200px; height:200px; }
+  .profile .name { font-size:25px; text-align:center; }
+
+  .more { margin:auto; }
+  .nav-menu a.active { background-color: white; color: black; }
+  .at-form a { font-weight: bold; text-decoration: underline; }
+  .at-form p { font-weight: 100; }
+
+  .like-button-container { float: right; margin: 10px; }
+
+}
