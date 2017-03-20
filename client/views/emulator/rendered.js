@@ -5,7 +5,7 @@ Template.emulator.onRendered(function() {
 
   this.nes = cfxnes({
     video: {
-      scale: 1
+      scale: 2
     }
   });
 
