@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"nes.roms"}],"uuid":"a23f7751f0f54da4829ff941f5fb0ae9"}

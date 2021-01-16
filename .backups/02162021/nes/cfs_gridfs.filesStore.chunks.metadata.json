@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"nes.cfs_gridfs.filesStore.chunks"}],"uuid":"eee43136504a47c9a4176215a03a886d"}

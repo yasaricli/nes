@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"nes.cfs.files.filerecord"}],"uuid":"cbef488f2b3f4f58b944069217ccf64a"}

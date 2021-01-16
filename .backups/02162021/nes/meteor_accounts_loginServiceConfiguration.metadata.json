@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"nes.meteor_accounts_loginServiceConfiguration"},{"v":{"$numberInt":"2"},"unique":true,"key":{"service":{"$numberInt":"1"}},"name":"service_1","ns":"nes.meteor_accounts_loginServiceConfiguration"}],"uuid":"44dd7a7b23f14503bc838d47730a69b4"}
